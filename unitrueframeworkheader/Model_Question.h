@@ -1,0 +1,215 @@
+//
+//  Model_Question.h
+//  nankang
+//
+//  Created by 军锋 安 on 12-7-20.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "DDXML.h"
+#import "SurveyLibraryLiteral.h"
+#import "DDXMLElementAdditions.h"
+#import "Model_Media.h"
+#import "Model_Expression.h"
+#import "Model_ObjectBase.h"
+#import "Model_Item.h"
+@interface Model_Question : Model_ObjectBase<NSCopying>
+{
+    NSString* Id; 
+    NSString* Identity; 
+    NSString* Title; 
+    NSString* Code; 
+    NSString* Tip;
+    NSString* IsAlternation; 
+    NSString* IsDraw; 
+    NSString* Memo; 
+    NSString* IsSamePage; 
+    NSString* IsDumb; 
+    NSString* IsQuota; 
+    NSString* QuotaFailedExpression;
+    NSString* FontFamily; 
+    NSString* FontSize; 
+    NSString* FontStyle; 
+    NSString* ForeColor; 
+    NSString* TipFontFamily; 
+    NSString* TipFontSize; 
+    NSString* TipFontStyle;
+    NSString* TipForeColor; 
+    NSString* _Style; 
+    NSString* MinItemAnswer; 
+    NSString* MaxItemAnswer; 
+    NSString* ItemAlternation; 
+    NSString* ItemDraw; 
+    NSString* OptionListId;
+    NSString* CategoryListId; 
+    NSString* ItemLayout; 
+    NSString* TableOddRowBColorSet; 
+    NSString* TableEvenRowBColorSet; 
+    NSString* TableOddColBColorSet;
+    NSString* TableEvenColBColorSet; 
+    NSString* TableOddRowBColor; 
+    NSString* TableEvenRowBColor; 
+    NSString* TableOddColBColor;
+    NSString* TableEvenColBColor; 
+    NSString* AItemAlternation; 
+    NSString* CItemAlternation; 
+    NSString* CItemDraw; 
+    NSString* AnswerTimeLimitMode;
+    NSString* AnswerTimeLimit; 
+    NSString* NeedRecord;
+    NSString* IgnoreLastAnswer; 
+    NSString* DenyEmptyAnswer; 
+    NSString* CanSkip; 
+    NSString* CItemIndexHide;
+    NSString* QItemIndexHide; 
+    NSString* AItemIndexHide; 
+    NSString* OptionDisplayOrder; 
+    NSString* OptionDisplayStyle; 
+    NSString* ScaleStyle;
+    NSString* MinScaleText; 
+    NSString* MaxScaleText; 
+    NSString* CItemImageStyleSetting; 
+    NSString* QItemImageStyleSetting;
+    NSString* AItemImageStyleSetting; 
+    NSString* QuestionShowItemNo; 
+    NSString* ItemColnums; 
+    NSString* ItemColWidth; 
+    NSString* ItemColSpace;
+    NSString* ItemRowSpace; 
+    NSString* ShowItemTitleInRule; 
+    NSString* QHeadMarginLeft; 
+    NSString* QHeadMarginRight; 
+    NSString* QHeadMargInTop;
+    NSString* QHeadMargInBottom; 
+    NSString* QHeadSpaceBetweenTitleTip; 
+    NSString* QHeadSpaceBetweenTitleMedia; 
+    NSString* QHeadMediaTitlePos;
+    NSString* QHeadTitleTipPos; 
+    NSString* QHeadTitleAlign; 
+    NSString* QHeadTipAlign; 
+    NSString* QHeadMediaAlign; 
+    NSString* QHeadTitleWidth;
+    NSString* QHeadTipWidth; 
+    NSString* TableRowWidth; 
+    NSString* TableCItemRowWidth; 
+    NSString* QuestionPhotoPolicy; 
+    NSString* QuestionMediaRecordPolicy;
+    NSString* GpsPolicy; 
+    NSString* TitleHasScript; 
+    NSString* TipHasScript; 
+    NSString* ItemTitleHasScript;
+    
+    Model_Media* questionMedia;
+    Model_Media* questionPhoto;
+    
+    NSMutableArray* questionExpressions;
+    NSMutableArray* InitExpressions;
+    NSMutableArray* CheckExpressions;
+    NSMutableArray* OperateExpressions;
+    NSMutableArray* GotoExpressions;
+    NSMutableArray* computeBeforeValidExpressions;
+    
+    NSMutableArray* qItems;
+    NSString* selectOrder;
+    
+    NSString* mediaURL;
+    int mediaType;
+}
+@property(strong,nonatomic)NSString* mediaURL;
+@property(assign,nonatomic)int mediaType;
+@property(strong,nonatomic)NSString* selectOrder;
+@property(strong,nonatomic)NSMutableArray* qItems;
+@property(strong,nonatomic)NSMutableArray* questionExpressions;
+@property(strong,nonatomic)NSMutableArray* InitExpressions;
+@property(strong,nonatomic)NSMutableArray* CheckExpressions;
+@property(strong,nonatomic)NSMutableArray* OperateExpressions;
+@property(strong,nonatomic)NSMutableArray* GotoExpressions;
+@property(strong,nonatomic)NSMutableArray* computeBeforeValidExpressions;
+@property(strong,nonatomic)Model_Media* questionMedia;
+@property(strong,nonatomic)Model_Media* questionPhoto;
+@property(strong,nonatomic)NSString* Id; 
+@property(strong,nonatomic)NSString* Identity; 
+@property(strong,nonatomic)NSString* Title; 
+@property(strong,nonatomic)NSString* Code; 
+@property(strong,nonatomic)NSString* Tip;
+@property(strong,nonatomic)NSString* IsAlternation; 
+@property(strong,nonatomic)NSString* IsDraw; 
+@property(strong,nonatomic)NSString* Memo; 
+@property(strong,nonatomic)NSString* IsSamePage; 
+@property(strong,nonatomic)NSString* IsDumb; 
+@property(strong,nonatomic)NSString* IsQuota; 
+@property(strong,nonatomic)NSString* QuotaFailedExpression;
+@property(strong,nonatomic)NSString* FontFamily; 
+@property(strong,nonatomic)NSString* FontSize; 
+@property(strong,nonatomic)NSString* FontStyle; 
+@property(strong,nonatomic)NSString* ForeColor; 
+@property(strong,nonatomic)NSString* TipFontFamily; 
+@property(strong,nonatomic)NSString* TipFontSize; 
+@property(strong,nonatomic)NSString* TipFontStyle;
+@property(strong,nonatomic)NSString* TipForeColor; 
+@property(strong,nonatomic)NSString* _Style; 
+@property(strong,nonatomic)NSString* MinItemAnswer; 
+@property(strong,nonatomic)NSString* MaxItemAnswer; 
+@property(strong,nonatomic)NSString* ItemAlternation; 
+@property(strong,nonatomic)NSString* ItemDraw; 
+@property(strong,nonatomic)NSString* OptionListId;
+@property(strong,nonatomic)NSString* CategoryListId; 
+@property(strong,nonatomic)NSString* ItemLayout; 
+@property(strong,nonatomic)NSString* TableOddRowBColorSet; 
+@property(strong,nonatomic)NSString* TableEvenRowBColorSet; 
+@property(strong,nonatomic)NSString* TableOddColBColorSet;
+@property(strong,nonatomic)NSString* TableEvenColBColorSet; 
+@property(strong,nonatomic)NSString* TableOddRowBColor; 
+@property(strong,nonatomic)NSString* TableEvenRowBColor; 
+@property(strong,nonatomic)NSString* TableOddColBColor;
+@property(strong,nonatomic)NSString* TableEvenColBColor; 
+@property(strong,nonatomic)NSString* AItemAlternation; 
+@property(strong,nonatomic)NSString* CItemAlternation; 
+@property(strong,nonatomic)NSString* CItemDraw; 
+@property(strong,nonatomic)NSString* AnswerTimeLimitMode;
+@property(strong,nonatomic)NSString* AnswerTimeLimit; 
+@property(strong,nonatomic)NSString* NeedRecord;
+@property(strong,nonatomic)NSString* IgnoreLastAnswer; 
+@property(strong,nonatomic)NSString* DenyEmptyAnswer; 
+@property(strong,nonatomic)NSString* CanSkip; 
+@property(strong,nonatomic)NSString* CItemIndexHide;
+@property(strong,nonatomic)NSString* QItemIndexHide; 
+@property(strong,nonatomic)NSString* AItemIndexHide; 
+@property(strong,nonatomic)NSString* OptionDisplayOrder; 
+@property(strong,nonatomic)NSString* OptionDisplayStyle; 
+@property(strong,nonatomic)NSString* ScaleStyle;
+@property(strong,nonatomic)NSString* MinScaleText; 
+@property(strong,nonatomic)NSString* MaxScaleText; 
+@property(strong,nonatomic)NSString* CItemImageStyleSetting; 
+@property(strong,nonatomic)NSString* QItemImageStyleSetting;
+@property(strong,nonatomic)NSString* AItemImageStyleSetting; 
+@property(strong,nonatomic)NSString* QuestionShowItemNo; 
+@property(strong,nonatomic)NSString* ItemColnums; 
+@property(strong,nonatomic)NSString* ItemColWidth; 
+@property(strong,nonatomic)NSString* ItemColSpace;
+@property(strong,nonatomic)NSString* ItemRowSpace; 
+@property(strong,nonatomic)NSString* ShowItemTitleInRule; 
+@property(strong,nonatomic)NSString* QHeadMarginLeft; 
+@property(strong,nonatomic)NSString* QHeadMarginRight; 
+@property(strong,nonatomic)NSString* QHeadMargInTop;
+@property(strong,nonatomic)NSString* QHeadMargInBottom; 
+@property(strong,nonatomic)NSString* QHeadSpaceBetweenTitleTip; 
+@property(strong,nonatomic)NSString* QHeadSpaceBetweenTitleMedia; 
+@property(strong,nonatomic)NSString* QHeadMediaTitlePos;
+@property(strong,nonatomic)NSString* QHeadTitleTipPos; 
+@property(strong,nonatomic)NSString* QHeadTitleAlign; 
+@property(strong,nonatomic)NSString* QHeadTipAlign; 
+@property(strong,nonatomic)NSString* QHeadMediaAlign; 
+@property(strong,nonatomic)NSString* QHeadTitleWidth;
+@property(strong,nonatomic)NSString* QHeadTipWidth; 
+@property(strong,nonatomic)NSString* TableRowWidth; 
+@property(strong,nonatomic)NSString* TableCItemRowWidth; 
+@property(strong,nonatomic)NSString* QuestionPhotoPolicy; 
+@property(strong,nonatomic)NSString* QuestionMediaRecordPolicy;
+@property(strong,nonatomic)NSString* GpsPolicy; 
+@property(strong,nonatomic)NSString* TitleHasScript; 
+@property(strong,nonatomic)NSString* TipHasScript; 
+@property(strong,nonatomic)NSString* ItemTitleHasScript;
+- (id)initWithXml:(DDXMLElement *)node surveyLib:(SurveyLibraryLiteral*) surveyLib;
+@end

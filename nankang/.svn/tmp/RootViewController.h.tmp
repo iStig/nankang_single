@@ -1,0 +1,60 @@
+//
+//  RootViewController.h
+//  nankang
+//
+//  Created by xudong jin on 12-8-11.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "UTBaseViewController.h"
+#import "QuestBaseViewController.h"
+#import "SurveyManager.h"
+#import "NKSample.h"
+@interface RootViewController : UTBaseViewController<UITableViewDataSource,UITableViewDelegate,NKSurveyExcuteDelegate>
+{
+  IBOutlet UITableView*mTableView;
+  NSMutableArray*mProjects;
+ IBOutlet UITableView*mSampleTableView;
+ IBOutlet UIView*mSampleManagerView;
+  int mCurrentSelected;//当前选择的项目
+  IBOutlet UIView*mSurveyView;
+  IBOutlet UIView*mSurveyQuestionView;
+  SurveyManager *mSurveyManager;
+  IBOutlet UIView*defaultMenuView;
+  IBOutlet UIView*projectManageMenuView;
+  IBOutlet UIView*otherMenuView;
+  IBOutlet UILabel *lblProjectName;
+  IBOutlet UILabel*lblSampleName;
+<<<<<<< .mine
+    
+  IBOutlet UIView *selectView;
+ UIButton *btn;
+    int type;// -1:不弹出selectView 1:弹出selectView 10:selectViewCell被选中
+    int btnstate;//
+     int btnstateOther;//
+    UIButton *otherBtn;
+    
+IBOutlet UITableView *selectTableView;
+=======
+    
+  IBOutlet UIView *selectView;
+ UIButton *btn;
+    int type;// -1:不弹出selectView 1:弹出selectView 10:selectViewCell被选中
+    int btnstate;//
+     int btnstateOther;//
+    UIButton *otherBtn;
+    
+IBOutlet UITableView *selectTableView;
+  NKSample*currentSample;
+  NSMutableDictionary*mSampleListWithStatus;//按照样本状态分成的样本列表
+>>>>>>> .r103
+}
+-(IBAction)excuteSurvey:(id)sender;//问卷执行
+-(IBAction)projectManageClicked:(id)sender;//项目管理
+-(IBAction)sampleManageClicked:(id)sender;//样本管理
+-(IBAction)statisticsClicked:(id)sender;//统计
+-(IBAction)otherClicked:(id)sender;//其他
+-(IBAction)cancle:(id)sender;
+
+@end

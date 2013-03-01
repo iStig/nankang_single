@@ -1,0 +1,293 @@
+//
+//  SettingsView.m
+//  nankang
+//
+//  Created by xudong jin on 12-8-25.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+#import"RootViewController.h"
+#import "ProjectListView.h"
+#import "Project.h"
+#import "AppDelegate.h"
+#import "CAPIResumeFile.h"
+#import "UIViewAdditions.h"
+@implementation ProjectListView
+@synthesize rootview,mCurrentSelected,mProjects;
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [[[NSBundle mainBundle] loadNibNamed:@"ProjectListView" owner:nil options:nil] objectAtIndex:0];
+    if (self) {
+        // Initialization code
+      self.frame=frame;
+      tableview=[self viewWithTag:1];
+      tableview.delegate=self;
+      tableview.dataSource=self;
+      mCurrentSelected=-1;
+   
+      
+    }
+    return self;
+}
+
+-(void)setMCurrentSelected:(int)currentSelected
+{
+  mCurrentSelected=currentSelected;
+  if (mCurrentSelected>=0) {
+    [[AppDelegate getAppDelegate]startGpsMonitor];
+  }
+}
+-(void)resetCurrentProject
+{
+  mCurrentSelected=-1;
+}
+-(void)setHidden:(BOOL)hidden
+{
+  if (!hidden) {
+    [tableview reloadData];
+  }
+   [super setHidden:hidden];
+}
+#pragma mark-
+#pragma  mark TableView delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  // Return the number of rows in the section.
+  return mProjects.count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 1;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{   
+  return  56;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{ 
+  static NSString *identify = @"ProjectCell";
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:(indexPath.row==mCurrentSelected?@"ProjectCell1":@"ProjectCell")];
+  
+  
+  if(!cell)
+  {
+    
+    
+    cell = [[[NSBundle mainBundle] loadNibNamed:@"ProjectCell" owner:nil options:nil] objectAtIndex:(indexPath.row==mCurrentSelected?1:0)];
+    
+  }
+  
+  Project*project=[mProjects objectAtIndex:indexPath.row];
+
+  UILabel*label1=(UILabel*)[cell viewWithTag:1];
+  label1.text=project.ProjectName;
+  UIImageView*image=[cell viewWithTag:7];
+  image.hidden=project.isOldProject;
+  //如果当前row没有被选中，则cell设置结束
+  if (mCurrentSelected!=indexPath.row) {
+    return cell;
+  }
+  //开始设置被选中的row
+  //1.1下载按钮相关设置
+  UIButton*btndown=(UIButton*)[cell viewWithTag:4];
+  [btndown setImage:[UIImage imageNamed:@"在线下载小图标"] forState:UIControlStateNormal];
+  [btndown setBackgroundImage:[UIImage imageNamed:@"按钮线框"] forState:UIControlStateNormal];
+  //UIImageView*leftimage=[cell viewWithTag:5];
+  if ([self getProjectDownloadProgress:project ]==100) {
+    [btndown setTitle:@"删除文件" forState:UIControlStateNormal];
+   [btndown setImage:[UIImage imageNamed:@"样本回收小图标1"] forState:UIControlStateNormal];
+  }
+  else {
+     [btndown setImage:[UIImage imageNamed:@"在线下载小图标"] forState:UIControlStateNormal];
+    if (project.fileDownloading) {
+      [btndown setTitle:@"    暂停" forState:UIControlStateNormal];
+      [((UIButton*)[cell viewWithTag:9])setTitle:@"    暂停" forState:UIControlStateNormal];
+      [btndown setImage:[UIImage imageNamed:@"在线下载中小图标"] forState:UIControlStateNormal];
+      [btndown setBackgroundImage:[UIImage imageNamed:@"在线下载中进程2"] forState:UIControlStateNormal];
+    }
+    else {
+      [btndown setTitle:@"在线下载" forState:UIControlStateNormal];
+      for (CAPIResumeFile*file in project.downloadFilelist) {
+        if (file.CompleteStatus==Loading) {
+          [btndown setTitle:@"    继续" forState:UIControlStateNormal];
+           [((UIButton*)[cell viewWithTag:9])setTitle:@"    继续" forState:UIControlStateNormal];
+            [btndown setImage:[UIImage imageNamed:@"在线下载中小图标"] forState:UIControlStateNormal];
+          [btndown setBackgroundImage:[UIImage imageNamed:@"在线下载中进程2"] forState:UIControlStateNormal];
+          break;
+        }
+        else if(file.CompleteStatus==Init)
+        {
+          [btndown setTitle:@"在线下载" forState:UIControlStateNormal];
+        }
+          }
+    }
+  }
+  [btndown addTarget:self action:@selector(downloadFileBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+  //1.2显示下载进度更新
+  UILabel*label2=(UILabel*)[cell viewWithTag:2];
+  label2.text=[[NSString alloc]initWithFormat:@"%d%%",[self getProjectDownloadProgress:project ]];
+  BOOL show=[self getProjectDownloadProgress:project ]<100&&[self getProjectDownloadProgress:project ]>0;
+  label2.hidden=!project.fileDownloading&&!show;
+  [cell bringSubviewToFront:label2];
+  //1.3 更新下载进度条
+  CGSize size=CGSizeMake([self getProjectDownloadProgress:project]*btndown.frame.size.width/100, [cell viewWithTag:8].frame.size.height);
+  [cell viewWithTag:8].hidden=[self getProjectDownloadProgress:project]==100;
+  [cell viewWithTag:8].frame=CGRectMake([cell viewWithTag:8].frame.origin.x, [cell viewWithTag:8].frame.origin.y, size.width, size.height);
+ 
+  
+  
+  //2.1上传按钮相关设置
+  UIButton*btnUpdate=(UIButton*)[cell viewWithTag:3];
+ 
+  [btnUpdate addTarget:self action:@selector(uploadFileBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+  [btnUpdate setTitle:@"上传答卷" forState:UIControlStateNormal];
+
+  [btnUpdate setImage:[UIImage imageNamed:@"上传答卷小图标"] forState:UIControlStateNormal];
+  [btnUpdate setBackgroundImage:[UIImage imageNamed:@"按钮线框"] forState:UIControlStateNormal];
+  //UIImageView*leftimage=[cell viewWithTag:5];
+  if ([self getProjectUploadProgress:project ]<100) {
+    if (project.fileuploading) {
+      [btnUpdate setTitle:@"    暂停" forState:UIControlStateNormal];
+      [((UIButton*)[cell viewWithTag:9])setTitle:@"    暂停" forState:UIControlStateNormal];
+      [btnUpdate setImage:[UIImage imageNamed:@"上传进行中小图标"] forState:UIControlStateNormal];
+      [btnUpdate setBackgroundImage:[UIImage imageNamed:@"在线下载中进程2"] forState:UIControlStateNormal];
+    }
+    else {
+      for (CAPIResumeFile*file in project.uploadFilelist) {
+        if (file.CompleteStatus==Loading) {
+          [btnUpdate setTitle:@"    继续" forState:UIControlStateNormal];
+          [((UIButton*)[cell viewWithTag:9])setTitle:@"    继续" forState:UIControlStateNormal];
+          [btnUpdate setImage:[UIImage imageNamed:@"上传进行中小图标"] forState:UIControlStateNormal];
+          [btnUpdate setBackgroundImage:[UIImage imageNamed:@"在线下载中进程2"] forState:UIControlStateNormal];
+          break;
+        }
+        
+      }
+    }
+
+  }
+ 
+//  if ([self getProjectUploadProgress:project] ==-1) //-1表示上传的是断点续传，不用更新进度条
+//       {
+//          return cell;
+//       }
+  //1.2显示上传进度更新
+  UILabel*label3=(UILabel*)[cell viewWithTag:10];
+  label3.text=[[NSString alloc]initWithFormat:@"%d%%",[self getProjectUploadProgress:project ]];
+  BOOL show1=[self getProjectUploadProgress:project ]<100&&[self getProjectUploadProgress:project ]>0;
+  label3.hidden=!project.fileuploading&&!show1;
+  [cell bringSubviewToFront:label3];
+  //1.3 更新上传进度条
+ size=CGSizeMake([self getProjectUploadProgress:project]*btndown.frame.size.width/100, [cell viewWithTag:11].frame.size.height);
+  [cell viewWithTag:11].hidden=[self getProjectUploadProgress:project]==100;
+  [cell viewWithTag:11].frame=CGRectMake([cell viewWithTag:11].frame.origin.x, [cell viewWithTag:11].frame.origin.y, size.width, size.height);
+  
+ 
+  
+
+  
+  return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  
+  mCurrentSelected=indexPath.row;
+  
+  [tableView reloadData];
+
+
+  [rootview groupSampleListwithStatus];
+
+    [[AppDelegate getAppDelegate]startGpsMonitor];
+
+
+  
+}
+-(void)refreshView
+{
+ 
+  mProjects=rootview.mProjects;
+  [tableview reloadData];
+}
+-(Project*)getSelectedProject
+{
+  if (mCurrentSelected<0||mProjects==nil) {
+    return nil;
+  }
+  return  [mProjects objectAtIndex:mCurrentSelected];
+}
+
+-(void)downloadFileBtnClicked:(id)sender
+{
+  Project *project=[self getSelectedProject];
+  if ([self getProjectDownloadProgress:project]==100) {
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"提示消息" message:@"确定要删除项目文件吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil] autorelease];
+    // optional - add more buttons:
+    [alert show];
+    
+    return;
+    
+  }
+  else {
+    project.fileDownloading=!project.fileDownloading;
+    
+    if (project.fileDownloading) {
+      [rootview downloadProjectFiles:[self getSelectedProject]]; 
+    }
+
+  }
+  [tableview reloadData];
+   
+}
+-(void)uploadFileBtnClicked:(id)sender
+{
+
+  Project*project=[self getSelectedProject];
+  project.fileuploading=!project.fileuploading;
+  if (project.fileuploading) {
+    [rootview uploadSurveysForProject:project];
+  }
+  [tableview reloadData];
+  
+}
+//计算指定项目下载文件的进度0－100
+-(int)getProjectDownloadProgress:(Project*)project
+{
+  long totalsize=0;
+  long downloadedsize=0;
+  for (CAPIResumeFile*file in project.downloadFilelist) {
+    totalsize+=file.FileSize;
+    downloadedsize+=file.CompleteSize;
+  }
+  if (totalsize==0) {
+    return 0;
+  }
+  if (downloadedsize==totalsize) {
+    project.fileDownloading=FALSE;
+  }
+  return downloadedsize*100/totalsize;
+}
+//计算指定项目上传文件的进度0－100  
+-(int)getProjectUploadProgress:(Project*)project
+{
+  long totalsize=0;
+  long uploadedsize=0;
+  for (CAPIResumeFile*file in project.uploadFilelist) {
+    totalsize+=file.FileSize;
+    uploadedsize+=file.CompleteSize;
+  }
+  if (totalsize==0) {
+    return 0;
+  }
+  if (uploadedsize==totalsize) {
+    project.fileuploading=FALSE;
+  }
+  return uploadedsize*100/totalsize;
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+{
+  if (buttonIndex==1) {
+    [rootview deleteProjectFiles:[self getSelectedProject]];
+  }
+}
+@end

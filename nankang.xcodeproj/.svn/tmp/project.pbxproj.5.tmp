@@ -1,0 +1,1873 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24D7422515B7D896002D9771 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D7422415B7D896002D9771 /* CoreLocation.framework */; };
+		24D7422715B7D8A1002D9771 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D7422615B7D8A1002D9771 /* MessageUI.framework */; };
+		24D7422915B7D995002D9771 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D7422815B7D995002D9771 /* MobileCoreServices.framework */; };
+		373C02B515DE34BA00979543 /* MChoiceQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 373C02A815DE34BA00979543 /* MChoiceQuestionView.m */; };
+		373C02B615DE34BA00979543 /* QuestBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373C02AA15DE34BA00979543 /* QuestBaseViewController.m */; };
+		373C02B715DE34BA00979543 /* QuestionBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 373C02AC15DE34BA00979543 /* QuestionBase.m */; };
+		373C02B815DE34BA00979543 /* SBlankQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 373C02AE15DE34BA00979543 /* SBlankQuestionView.m */; };
+		373C02B915DE34BA00979543 /* SChoiceQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 373C02B015DE34BA00979543 /* SChoiceQuestionView.m */; };
+		373C02BA15DE34BA00979543 /* SFormQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 373C02B215DE34BA00979543 /* SFormQuestionView.m */; };
+		373C02BB15DE34BA00979543 /* SurveyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 373C02B415DE34BA00979543 /* SurveyManager.m */; };
+		3787BD1515B12D6B00C8F212 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3787BD1415B12D6B00C8F212 /* UIKit.framework */; };
+		3787BD1715B12D6B00C8F212 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3787BD1615B12D6B00C8F212 /* Foundation.framework */; };
+		3787BD1915B12D6B00C8F212 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3787BD1815B12D6B00C8F212 /* CoreGraphics.framework */; };
+		3787BD1F15B12D6B00C8F212 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3787BD1D15B12D6B00C8F212 /* InfoPlist.strings */; };
+		3787BD2115B12D6B00C8F212 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3787BD2015B12D6B00C8F212 /* main.m */; };
+		3787BD2515B12D6B00C8F212 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3787BD2415B12D6B00C8F212 /* AppDelegate.m */; };
+		378BB4AF15E5CB190036675D /* libunitrueframework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 378BB4AE15E5CB190036675D /* libunitrueframework.a */; };
+		37B55E7915D62BE3004D4DE9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B55E7715D62BE3004D4DE9 /* LoginViewController.m */; };
+		37B55E7A15D62BE3004D4DE9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B55E7815D62BE3004D4DE9 /* LoginViewController.xib */; };
+		37B55E7E15D62BF9004D4DE9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B55E7C15D62BF9004D4DE9 /* RootViewController.m */; };
+		37B55E7F15D62BF9004D4DE9 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B55E7D15D62BF9004D4DE9 /* RootViewController.xib */; };
+		37B55EAB15D64985004D4DE9 /* ICON in Resources */ = {isa = PBXBuildFile; fileRef = 37B55E8715D64985004D4DE9 /* ICON */; };
+		37B55EAE15D64985004D4DE9 /* provinces.xml in Resources */ = {isa = PBXBuildFile; fileRef = 37B55E8C15D64985004D4DE9 /* provinces.xml */; };
+		37B55EAF15D64985004D4DE9 /* sur.sur in Resources */ = {isa = PBXBuildFile; fileRef = 37B55E8D15D64985004D4DE9 /* sur.sur */; };
+		37B55EB015D64985004D4DE9 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 37B55E8E15D64985004D4DE9 /* test.html */; };
+		37B55EB115D64985004D4DE9 /* test1.html in Resources */ = {isa = PBXBuildFile; fileRef = 37B55E8F15D64985004D4DE9 /* test1.html */; };
+		37B55EC715D64985004D4DE9 /* 民生问卷.sur in Resources */ = {isa = PBXBuildFile; fileRef = 37B55EA615D64985004D4DE9 /* 民生问卷.sur */; };
+		37B55EC915D64BC6004D4DE9 /* ProjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37B55EC815D64BC6004D4DE9 /* ProjectCell.xib */; };
+		37B590BF15B1414E006080FF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B590BE15B1414E006080FF /* Security.framework */; };
+		37B590C115B14158006080FF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B590C015B14158006080FF /* libxml2.dylib */; };
+		37B590C315B14161006080FF /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B590C215B14161006080FF /* libicucore.dylib */; };
+		37B590C515B1416A006080FF /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B590C415B1416A006080FF /* libz.dylib */; };
+		37B590C715B14179006080FF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B590C615B14179006080FF /* CFNetwork.framework */; };
+		37B590C915B1418E006080FF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B590C815B1418E006080FF /* libsqlite3.dylib */; };
+		37B590CB15B14198006080FF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B590CA15B14198006080FF /* SystemConfiguration.framework */; };
+		37B590CD15B141A0006080FF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B590CC15B141A0006080FF /* QuartzCore.framework */; };
+		9F98F7EA160AA82A0006314D /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F747160AA82A0006314D /* back.png */; };
+		9F98F7EB160AA82A0006314D /* BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F748160AA82A0006314D /* BG.png */; };
+		9F98F7EC160AA82A0006314D /* iconDownload.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F749160AA82A0006314D /* iconDownload.png */; };
+		9F98F7ED160AA82A0006314D /* iconinformation.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F74A160AA82A0006314D /* iconinformation.png */; };
+		9F98F7EE160AA82A0006314D /* iconinterview.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F74B160AA82A0006314D /* iconinterview.png */; };
+		9F98F7EF160AA82A0006314D /* iconQuestionnaire.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F74C160AA82A0006314D /* iconQuestionnaire.png */; };
+		9F98F7F0160AA82A0006314D /* iconRecovery.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F74D160AA82A0006314D /* iconRecovery.png */; };
+		9F98F7F1160AA82A0006314D /* iconUpload.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F74E160AA82A0006314D /* iconUpload.png */; };
+		9F98F7F2160AA82A0006314D /* Inputbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F74F160AA82A0006314D /* Inputbox.png */; };
+		9F98F7F3160AA82A0006314D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F750160AA82A0006314D /* logo.png */; };
+		9F98F7F4160AA82A0006314D /* menubg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F751160AA82A0006314D /* menubg1.png */; };
+		9F98F7F5160AA82A0006314D /* menubgarrowleft.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F752160AA82A0006314D /* menubgarrowleft.png */; };
+		9F98F7F6160AA82A0006314D /* menubgarrowright.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F753160AA82A0006314D /* menubgarrowright.png */; };
+		9F98F7F7160AA82A0006314D /* popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F754160AA82A0006314D /* popup.png */; };
+		9F98F7F8160AA82A0006314D /* signincheckbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F755160AA82A0006314D /* signincheckbox.png */; };
+		9F98F7F9160AA82A0006314D /* signincheckboxSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F756160AA82A0006314D /* signincheckboxSelected.png */; };
+		9F98F7FA160AA82A0006314D /* Switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F757160AA82A0006314D /* Switch.png */; };
+		9F98F7FB160AA82A0006314D /* textbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F758160AA82A0006314D /* textbg.png */; };
+		9F98F7FC160AA82A0006314D /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F759160AA82A0006314D /* title.png */; };
+		9F98F7FD160AA82A0006314D /* 关闭按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F75A160AA82A0006314D /* 关闭按钮.png */; };
+		9F98F7FE160AA82A0006314D /* 其他图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F75B160AA82A0006314D /* 其他图标.png */; };
+		9F98F7FF160AA82A0006314D /* 列表上的按钮外框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F75C160AA82A0006314D /* 列表上的按钮外框.png */; };
+		9F98F800160AA82A0006314D /* 列表背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F75D160AA82A0006314D /* 列表背景.png */; };
+		9F98F801160AA82A0006314D /* 列表背景上的分割线.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F75E160AA82A0006314D /* 列表背景上的分割线.png */; };
+		9F98F802160AA82A0006314D /* 列表高亮条.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F75F160AA82A0006314D /* 列表高亮条.png */; };
+		9F98F803160AA82A0006314D /* 单选.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F760160AA82A0006314D /* 单选.png */; };
+		9F98F804160AA82A0006314D /* 单选1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F761160AA82A0006314D /* 单选1.png */; };
+		9F98F805160AA82A0006314D /* 单选框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F762160AA82A0006314D /* 单选框.png */; };
+		9F98F806160AA82A0006314D /* 单选框点.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F763160AA82A0006314D /* 单选框点.png */; };
+		9F98F807160AA82A0006314D /* 复选框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F764160AA82A0006314D /* 复选框.png */; };
+		9F98F808160AA82A0006314D /* 复选框勾.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F765160AA82A0006314D /* 复选框勾.png */; };
+		9F98F809160AA82A0006314D /* 大弹出框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F766160AA82A0006314D /* 大弹出框.png */; };
+		9F98F80A160AA82A0006314D /* 大弹出框上的分割线.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F767160AA82A0006314D /* 大弹出框上的分割线.png */; };
+		9F98F80B160AA82A0006314D /* 按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F768160AA82A0006314D /* 按钮.png */; };
+		9F98F80C160AA82A0006314D /* 搜索png.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F769160AA82A0006314D /* 搜索png.png */; };
+		9F98F80D160AA82A0006314D /* 标题按钮-press.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F76A160AA82A0006314D /* 标题按钮-press.png */; };
+		9F98F80E160AA82A0006314D /* 标题按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F76B160AA82A0006314D /* 标题按钮.png */; };
+		9F98F80F160AA82A0006314D /* 样本管理图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F76C160AA82A0006314D /* 样本管理图标.png */; };
+		9F98F810160AA82A0006314D /* 统计.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F76D160AA82A0006314D /* 统计.png */; };
+		9F98F811160AA82A0006314D /* 编辑框 一行.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F76E160AA82A0006314D /* 编辑框 一行.png */; };
+		9F98F812160AA82A0006314D /* 编辑框 表格.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F76F160AA82A0006314D /* 编辑框 表格.png */; };
+		9F98F813160AA82A0006314D /* 背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F770160AA82A0006314D /* 背景.png */; };
+		9F98F814160AA82A0006314D /* 退出图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F771160AA82A0006314D /* 退出图标.png */; };
+		9F98F815160AA82A0006314D /* 问卷执行图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F772160AA82A0006314D /* 问卷执行图标.png */; };
+		9F98F816160AA82A0006314D /* 项目管理图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F773160AA82A0006314D /* 项目管理图标.png */; };
+		9F98F817160AA82A0006314D /* 启动等待界面.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F775160AA82A0006314D /* 启动等待界面.png */; };
+		9F98F818160AA82A0006314D /* 标志.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F776160AA82A0006314D /* 标志.png */; };
+		9F98F819160AA82A0006314D /* 登录背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F777160AA82A0006314D /* 登录背景.png */; };
+		9F98F81A160AA82A0006314D /* 登录页面专用复选框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F778160AA82A0006314D /* 登录页面专用复选框.png */; };
+		9F98F81B160AA82A0006314D /* 登录页面专用复选框勾.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F779160AA82A0006314D /* 登录页面专用复选框勾.png */; };
+		9F98F81C160AA82A0006314D /* 登录页面复选框勾.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F77A160AA82A0006314D /* 登录页面复选框勾.png */; };
+		9F98F81D160AA82A0006314D /* 登录页面复选框背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F77B160AA82A0006314D /* 登录页面复选框背景.png */; };
+		9F98F81E160AA82A0006314D /* 登录页面底部菜单背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F77C160AA82A0006314D /* 登录页面底部菜单背景.png */; };
+		9F98F81F160AA82A0006314D /* 登录页面编辑框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F77D160AA82A0006314D /* 登录页面编辑框.png */; };
+		9F98F820160AA82A0006314D /* 登陆页面LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F77E160AA82A0006314D /* 登陆页面LOGO.png */; };
+		9F98F821160AA82A0006314D /* 登陆页面按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F77F160AA82A0006314D /* 登陆页面按钮.png */; };
+		9F98F822160AA82A0006314D /* 编辑框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F780160AA82A0006314D /* 编辑框.png */; };
+		9F98F823160AA82A0006314D /* 退出小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F781160AA82A0006314D /* 退出小图标.png */; };
+		9F98F824160AA82A0006314D /* 二级图标主题应用.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F783160AA82A0006314D /* 二级图标主题应用.png */; };
+		9F98F825160AA82A0006314D /* 二级图标关于.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F784160AA82A0006314D /* 二级图标关于.png */; };
+		9F98F826160AA82A0006314D /* 二级图标版本更新.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F785160AA82A0006314D /* 二级图标版本更新.png */; };
+		9F98F827160AA82A0006314D /* 二级图标系统设置.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F786160AA82A0006314D /* 二级图标系统设置.png */; };
+		9F98F828160AA82A0006314D /* 二级图标终端注册.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F787160AA82A0006314D /* 二级图标终端注册.png */; };
+		9F98F829160AA82A0006314D /* 其他二级菜单.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F788160AA82A0006314D /* 其他二级菜单.png */; };
+		9F98F82A160AA82A0006314D /* 搜索按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F78A160AA82A0006314D /* 搜索按钮.png */; };
+		9F98F82B160AA82A0006314D /* 选择按钮1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F78B160AA82A0006314D /* 选择按钮1.png */; };
+		9F98F82C160AA82A0006314D /* 选择按钮2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F78C160AA82A0006314D /* 选择按钮2.png */; };
+		9F98F82D160AA82A0006314D /* 上一题小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F78E160AA82A0006314D /* 上一题小图标.png */; };
+		9F98F82E160AA82A0006314D /* 下一题小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F78F160AA82A0006314D /* 下一题小图标.png */; };
+		9F98F82F160AA82A0006314D /* 切换项目图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F790160AA82A0006314D /* 切换项目图标.png */; };
+		9F98F830160AA82A0006314D /* 图钉.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F791160AA82A0006314D /* 图钉.png */; };
+		9F98F831160AA82A0006314D /* 影片占位图片.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F792160AA82A0006314D /* 影片占位图片.png */; };
+		9F98F832160AA82A0006314D /* 拍照图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F793160AA82A0006314D /* 拍照图标.png */; };
+		9F98F833160AA82A0006314D /* 按钮线框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F794160AA82A0006314D /* 按钮线框.png */; };
+		9F98F834160AA82A0006314D /* 照片占位.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F795160AA82A0006314D /* 照片占位.png */; };
+		9F98F835160AA82A0006314D /* 照片占位图片.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F796160AA82A0006314D /* 照片占位图片.png */; };
+		9F98F836160AA82A0006314D /* 照片图片占位.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F797160AA82A0006314D /* 照片图片占位.png */; };
+		9F98F837160AA82A0006314D /* 照片按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F798160AA82A0006314D /* 照片按钮.png */; };
+		9F98F838160AA82A0006314D /* 答题记录1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F799160AA82A0006314D /* 答题记录1.png */; };
+		9F98F839160AA82A0006314D /* 答题记录2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F79A160AA82A0006314D /* 答题记录2.png */; };
+		9F98F83A160AA82A0006314D /* 进程1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F79B160AA82A0006314D /* 进程1.png */; };
+		9F98F83B160AA82A0006314D /* 进程2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F79C160AA82A0006314D /* 进程2.png */; };
+		9F98F83C160AA82A0006314D /* 进程条.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F79D160AA82A0006314D /* 进程条.png */; };
+		9F98F83D160AA82A0006314D /* 进程条背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F79E160AA82A0006314D /* 进程条背景.png */; };
+		9F98F83E160AA82A0006314D /* 退出小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F79F160AA82A0006314D /* 退出小图标.png */; };
+		9F98F83F160AA82A0006314D /* 上传答卷小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7A1160AA82A0006314D /* 上传答卷小图标.png */; };
+		9F98F840160AA82A0006314D /* 二级图标上传答卷.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7A2160AA82A0006314D /* 二级图标上传答卷.png */; };
+		9F98F841160AA82A0006314D /* 二级图标在线下载.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7A3160AA82A0006314D /* 二级图标在线下载.png */; };
+		9F98F842160AA82A0006314D /* 二级图标垃圾文件管理.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7A4160AA82A0006314D /* 二级图标垃圾文件管理.png */; };
+		9F98F843160AA82A0006314D /* 二级图标数据导出.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7A5160AA82A0006314D /* 二级图标数据导出.png */; };
+		9F98F844160AA82A0006314D /* 二级图标离线导入.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7A6160AA82A0006314D /* 二级图标离线导入.png */; };
+		9F98F845160AA82A0006314D /* 二级图标项目概况.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7A7160AA82A0006314D /* 二级图标项目概况.png */; };
+		9F98F846160AA82A0006314D /* 在线下载中小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7A8160AA82A0006314D /* 在线下载中小图标.png */; };
+		9F98F847160AA82A0006314D /* 在线下载中进程1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7A9160AA82A0006314D /* 在线下载中进程1.png */; };
+		9F98F848160AA82A0006314D /* 在线下载中进程2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7AA160AA82A0006314D /* 在线下载中进程2.png */; };
+		9F98F849160AA82A0006314D /* 在线下载小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7AB160AA82A0006314D /* 在线下载小图标.png */; };
+		9F98F84A160AA82A0006314D /* 按钮线框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7AC160AA82A0006314D /* 按钮线框.png */; };
+		9F98F84B160AA82A0006314D /* 新问卷图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7AD160AA82A0006314D /* 新问卷图标.png */; };
+		9F98F84C160AA82A0006314D /* 项目管理二级菜单.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7AE160AA82A0006314D /* 项目管理二级菜单.png */; };
+		9F98F84E160AA82A0006314D /* 标志.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7B1160AA82A0006314D /* 标志.png */; };
+		9F98F84F160AA82A0006314D /* 登录页面专用复选框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7B2160AA82A0006314D /* 登录页面专用复选框.png */; };
+		9F98F850160AA82A0006314D /* 登录页面专用复选框勾.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7B3160AA82A0006314D /* 登录页面专用复选框勾.png */; };
+		9F98F851160AA82A0006314D /* 编辑框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7B4160AA82A0006314D /* 编辑框.png */; };
+		9F98F852160AA82A0006314D /* TAB1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7B6160AA82A0006314D /* TAB1.png */; };
+		9F98F853160AA82A0006314D /* TAB2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7B7160AA82A0006314D /* TAB2.png */; };
+		9F98F854160AA82A0006314D /* TAB3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7B8160AA82A0006314D /* TAB3.png */; };
+		9F98F855160AA82A0006314D /* 列表上的按钮外框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7B9160AA82A0006314D /* 列表上的按钮外框.png */; };
+		9F98F856160AA82A0006314D /* 失败小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7BA160AA82A0006314D /* 失败小图标.png */; };
+		9F98F857160AA82A0006314D /* 失败顶部条.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7BB160AA82A0006314D /* 失败顶部条.png */; };
+		9F98F858160AA82A0006314D /* 开始访谈小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7BC160AA82A0006314D /* 开始访谈小图标.png */; };
+		9F98F859160AA82A0006314D /* 成功小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7BD160AA82A0006314D /* 成功小图标.png */; };
+		9F98F85A160AA82A0006314D /* 成功顶部条.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7BE160AA82A0006314D /* 成功顶部条.png */; };
+		9F98F85B160AA82A0006314D /* 未接触小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7BF160AA82A0006314D /* 未接触小图标.png */; };
+		9F98F85C160AA82A0006314D /* 未接触顶部条.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7C0160AA82A0006314D /* 未接触顶部条.png */; };
+		9F98F85D160AA82A0006314D /* 查看答卷小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7C1160AA82A0006314D /* 查看答卷小图标.png */; };
+		9F98F85E160AA82A0006314D /* 样本信息小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7C2160AA82A0006314D /* 样本信息小图标.png */; };
+		9F98F85F160AA82A0006314D /* 样本回收小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7C3160AA82A0006314D /* 样本回收小图标.png */; };
+		9F98F860160AA82A0006314D /* icon-确定.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7C5160AA82A0006314D /* icon-确定.png */; };
+		9F98F861160AA82A0006314D /* icon-确定press.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7C6160AA82A0006314D /* icon-确定press.png */; };
+		9F98F862160AA82A0006314D /* NEW小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7C7160AA82A0006314D /* NEW小图标.png */; };
+		9F98F863160AA82A0006314D /* 一级菜单按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7C8160AA82A0006314D /* 一级菜单按钮.png */; };
+		9F98F864160AA82A0006314D /* 一级菜单背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7C9160AA82A0006314D /* 一级菜单背景.png */; };
+		9F98F865160AA82A0006314D /* 上传文件小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7CA160AA82A0006314D /* 上传文件小图标.png */; };
+		9F98F866160AA82A0006314D /* 上传进行中小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7CB160AA82A0006314D /* 上传进行中小图标.png */; };
+		9F98F867160AA82A0006314D /* 下载进行中小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7CC160AA82A0006314D /* 下载进行中小图标.png */; };
+		9F98F868160AA82A0006314D /* 二级菜单活动板的分割线.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7CD160AA82A0006314D /* 二级菜单活动板的分割线.png */; };
+		9F98F869160AA82A0006314D /* 二级菜单活动板的箭头右.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7CE160AA82A0006314D /* 二级菜单活动板的箭头右.png */; };
+		9F98F86A160AA82A0006314D /* 二级菜单活动板的箭头左.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7CF160AA82A0006314D /* 二级菜单活动板的箭头左.png */; };
+		9F98F86B160AA82A0006314D /* 二级菜单活动背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7D0160AA82A0006314D /* 二级菜单活动背景.png */; };
+		9F98F86C160AA82A0006314D /* 切换项目小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7D1160AA82A0006314D /* 切换项目小图标.png */; };
+		9F98F86D160AA82A0006314D /* 单选框点.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7D2160AA82A0006314D /* 单选框点.png */; };
+		9F98F86E160AA82A0006314D /* 单选框背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7D3160AA82A0006314D /* 单选框背景.png */; };
+		9F98F86F160AA82A0006314D /* 在线下载小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7D4160AA82A0006314D /* 在线下载小图标.png */; };
+		9F98F870160AA82A0006314D /* 复选框勾.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7D5160AA82A0006314D /* 复选框勾.png */; };
+		9F98F871160AA82A0006314D /* 复选框背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7D6160AA82A0006314D /* 复选框背景.png */; };
+		9F98F872160AA82A0006314D /* 小弹出框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7D7160AA82A0006314D /* 小弹出框.png */; };
+		9F98F873160AA82A0006314D /* 开始访问小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7D8160AA82A0006314D /* 开始访问小图标.png */; };
+		9F98F874160AA82A0006314D /* 弹出框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7D9160AA82A0006314D /* 弹出框.png */; };
+		9F98F875160AA82A0006314D /* 未接触.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7DA160AA82A0006314D /* 未接触.png */; };
+		9F98F876160AA82A0006314D /* 查看答卷小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7DB160AA82A0006314D /* 查看答卷小图标.png */; };
+		9F98F877160AA82A0006314D /* 标签1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7DC160AA82A0006314D /* 标签1.png */; };
+		9F98F878160AA82A0006314D /* 标签2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7DD160AA82A0006314D /* 标签2.png */; };
+		9F98F879160AA82A0006314D /* 标签3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7DE160AA82A0006314D /* 标签3.png */; };
+		9F98F87A160AA82A0006314D /* 标签4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7DF160AA82A0006314D /* 标签4.png */; };
+		9F98F87B160AA82A0006314D /* 样本信息小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7E0160AA82A0006314D /* 样本信息小图标.png */; };
+		9F98F87C160AA82A0006314D /* 样本回收小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7E1160AA82A0006314D /* 样本回收小图标.png */; };
+		9F98F87D160AA82A0006314D /* 正文中的按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7E2160AA82A0006314D /* 正文中的按钮.png */; };
+		9F98F87E160AA82A0006314D /* 正文背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7E3160AA82A0006314D /* 正文背景.png */; };
+		9F98F87F160AA82A0006314D /* 正文背景左侧的装饰凹槽.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7E4160AA82A0006314D /* 正文背景左侧的装饰凹槽.png */; };
+		9F98F880160AA82A0006314D /* 访问失败.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7E5160AA82A0006314D /* 访问失败.png */; };
+		9F98F881160AA82A0006314D /* 访问成功.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7E6160AA82A0006314D /* 访问成功.png */; };
+		9F98F882160AA82A0006314D /* 返回小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7E7160AA82A0006314D /* 返回小图标.png */; };
+		9F98F883160AA82A0006314D /* 退出小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7E8160AA82A0006314D /* 退出小图标.png */; };
+		9F98F884160AA82A0006314D /* 顶部条.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F7E9160AA82A0006314D /* 顶部条.png */; };
+		9F98F89E160AA8420006314D /* 按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F885160AA8420006314D /* 按钮.png */; };
+		9F98F89F160AA8420006314D /* 按钮线框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F886160AA8420006314D /* 按钮线框.png */; };
+		9F98F8A0160AA8420006314D /* 背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F887160AA8420006314D /* 背景.png */; };
+		9F98F8A1160AA8420006314D /* 编辑框 表格.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F888160AA8420006314D /* 编辑框 表格.png */; };
+		9F98F8A2160AA8420006314D /* 编辑框 一行.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F889160AA8420006314D /* 编辑框 一行.png */; };
+		9F98F8A3160AA8420006314D /* 大弹出框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F88A160AA8420006314D /* 大弹出框.png */; };
+		9F98F8A4160AA8420006314D /* 大弹出框上的分割线.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F88B160AA8420006314D /* 大弹出框上的分割线.png */; };
+		9F98F8A5160AA8420006314D /* 单选框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F88C160AA8420006314D /* 单选框.png */; };
+		9F98F8A6160AA8420006314D /* 单选框点.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F88D160AA8420006314D /* 单选框点.png */; };
+		9F98F8A7160AA8420006314D /* 二级菜单聚焦.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F88E160AA8420006314D /* 二级菜单聚焦.png */; };
+		9F98F8A8160AA8420006314D /* 复选框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F88F160AA8420006314D /* 复选框.png */; };
+		9F98F8A9160AA8420006314D /* 复选框勾.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F890160AA8420006314D /* 复选框勾.png */; };
+		9F98F8AA160AA8420006314D /* 关闭按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F891160AA8420006314D /* 关闭按钮.png */; };
+		9F98F8AB160AA8420006314D /* 列表背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F892160AA8420006314D /* 列表背景.png */; };
+		9F98F8AC160AA8420006314D /* 列表背景上的分割线.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F893160AA8420006314D /* 列表背景上的分割线.png */; };
+		9F98F8AD160AA8420006314D /* 列表高亮条.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F894160AA8420006314D /* 列表高亮条.png */; };
+		9F98F8AE160AA8420006314D /* 其他图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F895160AA8420006314D /* 其他图标.png */; };
+		9F98F8AF160AA8420006314D /* 切换项目图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F896160AA8420006314D /* 切换项目图标.png */; };
+		9F98F8B0160AA8420006314D /* 统计.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F897160AA8420006314D /* 统计.png */; };
+		9F98F8B1160AA8420006314D /* 退出图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F898160AA8420006314D /* 退出图标.png */; };
+		9F98F8B2160AA8420006314D /* 问卷执行图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F899160AA8420006314D /* 问卷执行图标.png */; };
+		9F98F8B3160AA8420006314D /* 项目管理图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F89A160AA8420006314D /* 项目管理图标.png */; };
+		9F98F8B4160AA8420006314D /* 小弹出框.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F89B160AA8420006314D /* 小弹出框.png */; };
+		9F98F8B5160AA8420006314D /* 样本管理图标.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F89C160AA8420006314D /* 样本管理图标.png */; };
+		9F98F8B6160AA8420006314D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F98F89D160AA8420006314D /* Default.png */; };
+		9F9E881B160C18E3001D3E57 /* 其他二级菜单01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E8817160C18E3001D3E57 /* 其他二级菜单01.png */; };
+		9F9E881C160C18E3001D3E57 /* 其他二级菜单02.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E8818160C18E3001D3E57 /* 其他二级菜单02.png */; };
+		9F9E881D160C18E3001D3E57 /* 项目管理二级菜单01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E8819160C18E3001D3E57 /* 项目管理二级菜单01.png */; };
+		9F9E881E160C18E3001D3E57 /* 项目管理二级菜单02.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9E881A160C18E3001D3E57 /* 项目管理二级菜单02.png */; };
+		FC81D44A15F089DA0051F035 /* ProjectListView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D44815F089DA0051F035 /* ProjectListView.m */; };
+		FC81D44B15F089DA0051F035 /* ProjectListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D44915F089DA0051F035 /* ProjectListView.xib */; };
+		FC81D44F15F089EA0051F035 /* SampleListView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D44D15F089EA0051F035 /* SampleListView.m */; };
+		FC81D45015F089EA0051F035 /* SampleListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D44E15F089EA0051F035 /* SampleListView.xib */; };
+		FC81D45415F089F50051F035 /* SurveyExcuteView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D45215F089F50051F035 /* SurveyExcuteView.m */; };
+		FC81D45515F089F50051F035 /* SurveyExcuteView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D45315F089F50051F035 /* SurveyExcuteView.xib */; };
+		FC81D45715F08A060051F035 /* SampleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D45615F08A060051F035 /* SampleCell.xib */; };
+		FC81D45915F08A240051F035 /* nankang-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC81D45815F08A240051F035 /* nankang-Info.plist */; };
+		FC81D47615F08A3D0051F035 /* DeleteFilesView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D45C15F08A3D0051F035 /* DeleteFilesView.m */; };
+		FC81D47715F08A3D0051F035 /* DeleteFilesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D45D15F08A3D0051F035 /* DeleteFilesView.xib */; };
+		FC81D47815F08A3D0051F035 /* ExportView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D45F15F08A3D0051F035 /* ExportView.m */; };
+		FC81D47915F08A3D0051F035 /* ExportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D46015F08A3D0051F035 /* ExportView.xib */; };
+		FC81D47A15F08A3D0051F035 /* ImportView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D46215F08A3D0051F035 /* ImportView.m */; };
+		FC81D47B15F08A3D0051F035 /* ImportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D46315F08A3D0051F035 /* ImportView.xib */; };
+		FC81D47C15F08A3D0051F035 /* ProjectInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D46515F08A3D0051F035 /* ProjectInfoView.m */; };
+		FC81D47D15F08A3D0051F035 /* ProjectInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D46615F08A3D0051F035 /* ProjectInfoView.xib */; };
+		FC81D47E15F08A3D0051F035 /* ProjectSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D46815F08A3D0051F035 /* ProjectSelectView.m */; };
+		FC81D47F15F08A3D0051F035 /* ProjectSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D46915F08A3D0051F035 /* ProjectSelectView.xib */; };
+		FC81D48015F08A3D0051F035 /* SampleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D46B15F08A3D0051F035 /* SampleInfoView.m */; };
+		FC81D48115F08A3D0051F035 /* SampleInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D46C15F08A3D0051F035 /* SampleInfoView.xib */; };
+		FC81D48215F08A3D0051F035 /* SampleSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D46E15F08A3D0051F035 /* SampleSelectView.m */; };
+		FC81D48315F08A3D0051F035 /* SampleSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D46F15F08A3D0051F035 /* SampleSelectView.xib */; };
+		FC81D48415F08A3D0051F035 /* SettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D47115F08A3D0051F035 /* SettingsView.m */; };
+		FC81D48515F08A3D0051F035 /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D47215F08A3D0051F035 /* SettingsView.xib */; };
+		FC81D48615F08A3D0051F035 /* ThemeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC81D47415F08A3D0051F035 /* ThemeView.m */; };
+		FC81D48715F08A3D0051F035 /* ThemeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC81D47515F08A3D0051F035 /* ThemeView.xib */; };
+		FC8C197B16080D8D0040BA9C /* UploadSampleSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C197916080D8C0040BA9C /* UploadSampleSelectView.m */; };
+		FC8C197C16080D8D0040BA9C /* UploadSampleSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC8C197A16080D8D0040BA9C /* UploadSampleSelectView.xib */; };
+		FC8F999215F8B2DB003A1208 /* BFormQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F998B15F8B2DB003A1208 /* BFormQuestionView.m */; };
+		FC8F999315F8B2DB003A1208 /* MBlankQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F998D15F8B2DB003A1208 /* MBlankQuestionView.m */; };
+		FC8F999415F8B2DB003A1208 /* MChoiceOrderQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F998F15F8B2DB003A1208 /* MChoiceOrderQuestionView.m */; };
+		FC8F999515F8B2DB003A1208 /* MFormQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F999115F8B2DB003A1208 /* MFormQuestionView.m */; };
+		FC992E4D15F4A0CB00E48D12 /* StatisticView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC992E4B15F4A0CA00E48D12 /* StatisticView.m */; };
+		FC992E4E15F4A0CB00E48D12 /* StatisticView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC992E4C15F4A0CB00E48D12 /* StatisticView.xib */; };
+		FCB72C511609D7D000EA51DB /* 按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C371609D7D000EA51DB /* 按钮.png */; };
+		FCB72C521609D7D000EA51DB /* 背景.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C381609D7D000EA51DB /* 背景.png */; };
+		FCB72C531609D7D000EA51DB /* 编辑框 表格.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C391609D7D000EA51DB /* 编辑框 表格.png */; };
+		FCB72C541609D7D000EA51DB /* 编辑框 一行.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C3A1609D7D000EA51DB /* 编辑框 一行.png */; };
+		FCB72C551609D7D000EA51DB /* 标题按钮-press.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C3B1609D7D000EA51DB /* 标题按钮-press.png */; };
+		FCB72C561609D7D000EA51DB /* 标题按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C3C1609D7D000EA51DB /* 标题按钮.png */; };
+		FCB72C571609D7D000EA51DB /* 大弹出框.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C3D1609D7D000EA51DB /* 大弹出框.png */; };
+		FCB72C581609D7D000EA51DB /* 大弹出框上的分割线.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C3E1609D7D000EA51DB /* 大弹出框上的分割线.png */; };
+		FCB72C591609D7D000EA51DB /* 单选.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C3F1609D7D000EA51DB /* 单选.png */; };
+		FCB72C5A1609D7D000EA51DB /* 单选1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C401609D7D000EA51DB /* 单选1.png */; };
+		FCB72C5B1609D7D000EA51DB /* 单选框.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C411609D7D000EA51DB /* 单选框.png */; };
+		FCB72C5C1609D7D000EA51DB /* 单选框点.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C421609D7D000EA51DB /* 单选框点.png */; };
+		FCB72C5D1609D7D000EA51DB /* 复选框.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C431609D7D000EA51DB /* 复选框.png */; };
+		FCB72C5E1609D7D000EA51DB /* 复选框勾.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C441609D7D000EA51DB /* 复选框勾.png */; };
+		FCB72C5F1609D7D000EA51DB /* 关闭按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C451609D7D000EA51DB /* 关闭按钮.png */; };
+		FCB72C601609D7D000EA51DB /* 列表背景.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C461609D7D000EA51DB /* 列表背景.png */; };
+		FCB72C611609D7D000EA51DB /* 列表背景上的分割线.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C471609D7D000EA51DB /* 列表背景上的分割线.png */; };
+		FCB72C621609D7D000EA51DB /* 列表高亮条.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C481609D7D000EA51DB /* 列表高亮条.png */; };
+		FCB72C631609D7D000EA51DB /* 列表上的按钮外框.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C491609D7D000EA51DB /* 列表上的按钮外框.png */; };
+		FCB72C641609D7D000EA51DB /* 其他图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C4A1609D7D000EA51DB /* 其他图标.png */; };
+		FCB72C651609D7D000EA51DB /* 搜索png.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C4B1609D7D000EA51DB /* 搜索png.png */; };
+		FCB72C661609D7D000EA51DB /* 统计.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C4C1609D7D000EA51DB /* 统计.png */; };
+		FCB72C671609D7D000EA51DB /* 退出图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C4D1609D7D000EA51DB /* 退出图标.png */; };
+		FCB72C681609D7D000EA51DB /* 问卷执行图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C4E1609D7D000EA51DB /* 问卷执行图标.png */; };
+		FCB72C691609D7D000EA51DB /* 项目管理图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C4F1609D7D000EA51DB /* 项目管理图标.png */; };
+		FCB72C6A1609D7D000EA51DB /* 样本管理图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C501609D7D000EA51DB /* 样本管理图标.png */; };
+		FCB72CB01609D7F700EA51DB /* 启动等待界面.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C6D1609D7F700EA51DB /* 启动等待界面.png */; };
+		FCB72CB11609D7F700EA51DB /* 标志.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C6E1609D7F700EA51DB /* 标志.png */; };
+		FCB72CB21609D7F700EA51DB /* 登录背景.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C6F1609D7F700EA51DB /* 登录背景.png */; };
+		FCB72CB31609D7F700EA51DB /* 登录页面专用复选框.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C701609D7F700EA51DB /* 登录页面专用复选框.png */; };
+		FCB72CB41609D7F700EA51DB /* 登录页面专用复选框勾.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C711609D7F700EA51DB /* 登录页面专用复选框勾.png */; };
+		FCB72CB51609D7F700EA51DB /* 登录页面复选框勾.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C721609D7F700EA51DB /* 登录页面复选框勾.png */; };
+		FCB72CB61609D7F700EA51DB /* 登录页面复选框背景.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C731609D7F700EA51DB /* 登录页面复选框背景.png */; };
+		FCB72CB71609D7F700EA51DB /* 登录页面底部菜单背景.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C741609D7F700EA51DB /* 登录页面底部菜单背景.png */; };
+		FCB72CB81609D7F700EA51DB /* 登录页面编辑框.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C751609D7F700EA51DB /* 登录页面编辑框.png */; };
+		FCB72CB91609D7F700EA51DB /* 登陆页面LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C761609D7F700EA51DB /* 登陆页面LOGO.png */; };
+		FCB72CBA1609D7F700EA51DB /* 登陆页面按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C771609D7F700EA51DB /* 登陆页面按钮.png */; };
+		FCB72CBB1609D7F700EA51DB /* 编辑框.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C781609D7F700EA51DB /* 编辑框.png */; };
+		FCB72CBC1609D7F700EA51DB /* 退出小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C791609D7F700EA51DB /* 退出小图标.png */; };
+		FCB72CBD1609D7F700EA51DB /* 搜索按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C7C1609D7F700EA51DB /* 搜索按钮.png */; };
+		FCB72CBE1609D7F700EA51DB /* 选择按钮1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C7D1609D7F700EA51DB /* 选择按钮1.png */; };
+		FCB72CBF1609D7F700EA51DB /* 选择按钮2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C7E1609D7F700EA51DB /* 选择按钮2.png */; };
+		FCB72CC01609D7F700EA51DB /* 影片占位图片.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C801609D7F700EA51DB /* 影片占位图片.png */; };
+		FCB72CC11609D7F700EA51DB /* 拍照图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C811609D7F700EA51DB /* 拍照图标.png */; };
+		FCB72CC21609D7F700EA51DB /* 照片占位图片.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C821609D7F700EA51DB /* 照片占位图片.png */; };
+		FCB72CC31609D7F700EA51DB /* 进程条.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C831609D7F700EA51DB /* 进程条.png */; };
+		FCB72CC41609D7F700EA51DB /* 进程条背景.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C841609D7F700EA51DB /* 进程条背景.png */; };
+		FCB72CC51609D7F700EA51DB /* 上传答卷小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C861609D7F700EA51DB /* 上传答卷小图标.png */; };
+		FCB72CC61609D7F700EA51DB /* 在线下载小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C871609D7F700EA51DB /* 在线下载小图标.png */; };
+		FCB72CC71609D7F700EA51DB /* 新问卷图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C881609D7F700EA51DB /* 新问卷图标.png */; };
+		FCB72CC81609D7F700EA51DB /* icon-确定.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C8B1609D7F700EA51DB /* icon-确定.png */; };
+		FCB72CC91609D7F700EA51DB /* icon-确定press.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C8C1609D7F700EA51DB /* icon-确定press.png */; };
+		FCB72CCA1609D7F700EA51DB /* NEW小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C8D1609D7F700EA51DB /* NEW小图标.png */; };
+		FCB72CCB1609D7F700EA51DB /* 一级菜单按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C8E1609D7F700EA51DB /* 一级菜单按钮.png */; };
+		FCB72CCC1609D7F700EA51DB /* 一级菜单背景.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C8F1609D7F700EA51DB /* 一级菜单背景.png */; };
+		FCB72CCD1609D7F700EA51DB /* 上传文件小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C901609D7F700EA51DB /* 上传文件小图标.png */; };
+		FCB72CCE1609D7F700EA51DB /* 上传进行中小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C911609D7F700EA51DB /* 上传进行中小图标.png */; };
+		FCB72CCF1609D7F700EA51DB /* 下载进行中小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C921609D7F700EA51DB /* 下载进行中小图标.png */; };
+		FCB72CD01609D7F700EA51DB /* 二级菜单活动板的分割线.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C931609D7F700EA51DB /* 二级菜单活动板的分割线.png */; };
+		FCB72CD11609D7F700EA51DB /* 二级菜单活动板的箭头右.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C941609D7F700EA51DB /* 二级菜单活动板的箭头右.png */; };
+		FCB72CD21609D7F700EA51DB /* 二级菜单活动板的箭头左.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C951609D7F700EA51DB /* 二级菜单活动板的箭头左.png */; };
+		FCB72CD31609D7F700EA51DB /* 二级菜单活动背景.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C961609D7F700EA51DB /* 二级菜单活动背景.png */; };
+		FCB72CD41609D7F700EA51DB /* 切换项目小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C971609D7F700EA51DB /* 切换项目小图标.png */; };
+		FCB72CD51609D7F700EA51DB /* 单选框点.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C981609D7F700EA51DB /* 单选框点.png */; };
+		FCB72CD61609D7F700EA51DB /* 单选框背景.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C991609D7F700EA51DB /* 单选框背景.png */; };
+		FCB72CD71609D7F700EA51DB /* 在线下载小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C9A1609D7F700EA51DB /* 在线下载小图标.png */; };
+		FCB72CD81609D7F700EA51DB /* 复选框勾.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C9B1609D7F700EA51DB /* 复选框勾.png */; };
+		FCB72CD91609D7F700EA51DB /* 复选框背景.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C9C1609D7F700EA51DB /* 复选框背景.png */; };
+		FCB72CDA1609D7F700EA51DB /* 小弹出框.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C9D1609D7F700EA51DB /* 小弹出框.png */; };
+		FCB72CDB1609D7F700EA51DB /* 开始访问小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C9E1609D7F700EA51DB /* 开始访问小图标.png */; };
+		FCB72CDC1609D7F700EA51DB /* 弹出框.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72C9F1609D7F700EA51DB /* 弹出框.png */; };
+		FCB72CDD1609D7F700EA51DB /* 未接触.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CA01609D7F700EA51DB /* 未接触.png */; };
+		FCB72CDE1609D7F700EA51DB /* 查看答卷小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CA11609D7F700EA51DB /* 查看答卷小图标.png */; };
+		FCB72CDF1609D7F700EA51DB /* 标签1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CA21609D7F700EA51DB /* 标签1.png */; };
+		FCB72CE01609D7F700EA51DB /* 标签2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CA31609D7F700EA51DB /* 标签2.png */; };
+		FCB72CE11609D7F700EA51DB /* 标签3.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CA41609D7F700EA51DB /* 标签3.png */; };
+		FCB72CE21609D7F700EA51DB /* 标签4.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CA51609D7F700EA51DB /* 标签4.png */; };
+		FCB72CE31609D7F700EA51DB /* 样本信息小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CA61609D7F700EA51DB /* 样本信息小图标.png */; };
+		FCB72CE41609D7F700EA51DB /* 样本回收小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CA71609D7F700EA51DB /* 样本回收小图标.png */; };
+		FCB72CE51609D7F700EA51DB /* 正文中的按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CA81609D7F700EA51DB /* 正文中的按钮.png */; };
+		FCB72CE61609D7F700EA51DB /* 正文背景.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CA91609D7F700EA51DB /* 正文背景.png */; };
+		FCB72CE71609D7F700EA51DB /* 正文背景左侧的装饰凹槽.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CAA1609D7F700EA51DB /* 正文背景左侧的装饰凹槽.png */; };
+		FCB72CE81609D7F700EA51DB /* 访问失败.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CAB1609D7F700EA51DB /* 访问失败.png */; };
+		FCB72CE91609D7F700EA51DB /* 访问成功.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CAC1609D7F700EA51DB /* 访问成功.png */; };
+		FCB72CEA1609D7F700EA51DB /* 返回小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CAD1609D7F700EA51DB /* 返回小图标.png */; };
+		FCB72CEB1609D7F700EA51DB /* 退出小图标.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CAE1609D7F700EA51DB /* 退出小图标.png */; };
+		FCB72CEC1609D7F700EA51DB /* 顶部条.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB72CAF1609D7F700EA51DB /* 顶部条.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24D7422415B7D896002D9771 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		24D7422615B7D8A1002D9771 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		24D7422815B7D995002D9771 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		373C02A715DE34BA00979543 /* MChoiceQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MChoiceQuestionView.h; sourceTree = "<group>"; };
+		373C02A815DE34BA00979543 /* MChoiceQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MChoiceQuestionView.m; sourceTree = "<group>"; };
+		373C02A915DE34BA00979543 /* QuestBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestBaseViewController.h; sourceTree = "<group>"; };
+		373C02AA15DE34BA00979543 /* QuestBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestBaseViewController.m; sourceTree = "<group>"; };
+		373C02AB15DE34BA00979543 /* QuestionBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionBase.h; sourceTree = "<group>"; };
+		373C02AC15DE34BA00979543 /* QuestionBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionBase.m; sourceTree = "<group>"; };
+		373C02AD15DE34BA00979543 /* SBlankQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBlankQuestionView.h; sourceTree = "<group>"; };
+		373C02AE15DE34BA00979543 /* SBlankQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBlankQuestionView.m; sourceTree = "<group>"; };
+		373C02AF15DE34BA00979543 /* SChoiceQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SChoiceQuestionView.h; sourceTree = "<group>"; };
+		373C02B015DE34BA00979543 /* SChoiceQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SChoiceQuestionView.m; sourceTree = "<group>"; };
+		373C02B115DE34BA00979543 /* SFormQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFormQuestionView.h; sourceTree = "<group>"; };
+		373C02B215DE34BA00979543 /* SFormQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFormQuestionView.m; sourceTree = "<group>"; };
+		373C02B315DE34BA00979543 /* SurveyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyManager.h; sourceTree = "<group>"; };
+		373C02B415DE34BA00979543 /* SurveyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyManager.m; sourceTree = "<group>"; };
+		3787BD1015B12D6B00C8F212 /* nankang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nankang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3787BD1415B12D6B00C8F212 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3787BD1615B12D6B00C8F212 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3787BD1815B12D6B00C8F212 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3787BD1C15B12D6B00C8F212 /* nankang-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "nankang-Info.plist"; sourceTree = "<group>"; };
+		3787BD1E15B12D6B00C8F212 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3787BD2015B12D6B00C8F212 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3787BD2215B12D6B00C8F212 /* nankang-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nankang-Prefix.pch"; sourceTree = "<group>"; };
+		3787BD2315B12D6B00C8F212 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3787BD2415B12D6B00C8F212 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		378BB4AE15E5CB190036675D /* libunitrueframework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libunitrueframework.a; path = UnitrueFramework/libunitrueframework.a; sourceTree = "<group>"; };
+		37B55E7615D62BE3004D4DE9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		37B55E7715D62BE3004D4DE9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		37B55E7815D62BE3004D4DE9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		37B55E7B15D62BF9004D4DE9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		37B55E7C15D62BF9004D4DE9 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		37B55E7D15D62BF9004D4DE9 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		37B55E8715D64985004D4DE9 /* ICON */ = {isa = PBXFileReference; lastKnownFileType = file; path = ICON; sourceTree = "<group>"; };
+		37B55E8C15D64985004D4DE9 /* provinces.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = provinces.xml; sourceTree = "<group>"; };
+		37B55E8D15D64985004D4DE9 /* sur.sur */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sur.sur; sourceTree = "<group>"; };
+		37B55E8E15D64985004D4DE9 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		37B55E8F15D64985004D4DE9 /* test1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test1.html; sourceTree = "<group>"; };
+		37B55EA615D64985004D4DE9 /* 民生问卷.sur */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "民生问卷.sur"; sourceTree = "<group>"; };
+		37B55EC815D64BC6004D4DE9 /* ProjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectCell.xib; sourceTree = "<group>"; };
+		37B5909315B12DD2006080FF /* libunitrueframework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libunitrueframework.a; path = "../UnitrueFramework/build/Release-iphoneos/libunitrueframework.a"; sourceTree = "<group>"; };
+		37B590BE15B1414E006080FF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		37B590C015B14158006080FF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		37B590C215B14161006080FF /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		37B590C415B1416A006080FF /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		37B590C615B14179006080FF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		37B590C815B1418E006080FF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		37B590CA15B14198006080FF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		37B590CC15B141A0006080FF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9F98F747160AA82A0006314D /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		9F98F748160AA82A0006314D /* BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG.png; sourceTree = "<group>"; };
+		9F98F749160AA82A0006314D /* iconDownload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconDownload.png; sourceTree = "<group>"; };
+		9F98F74A160AA82A0006314D /* iconinformation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconinformation.png; sourceTree = "<group>"; };
+		9F98F74B160AA82A0006314D /* iconinterview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconinterview.png; sourceTree = "<group>"; };
+		9F98F74C160AA82A0006314D /* iconQuestionnaire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconQuestionnaire.png; sourceTree = "<group>"; };
+		9F98F74D160AA82A0006314D /* iconRecovery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconRecovery.png; sourceTree = "<group>"; };
+		9F98F74E160AA82A0006314D /* iconUpload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconUpload.png; sourceTree = "<group>"; };
+		9F98F74F160AA82A0006314D /* Inputbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Inputbox.png; sourceTree = "<group>"; };
+		9F98F750160AA82A0006314D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		9F98F751160AA82A0006314D /* menubg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubg1.png; sourceTree = "<group>"; };
+		9F98F752160AA82A0006314D /* menubgarrowleft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubgarrowleft.png; sourceTree = "<group>"; };
+		9F98F753160AA82A0006314D /* menubgarrowright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubgarrowright.png; sourceTree = "<group>"; };
+		9F98F754160AA82A0006314D /* popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup.png; sourceTree = "<group>"; };
+		9F98F755160AA82A0006314D /* signincheckbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signincheckbox.png; sourceTree = "<group>"; };
+		9F98F756160AA82A0006314D /* signincheckboxSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signincheckboxSelected.png; sourceTree = "<group>"; };
+		9F98F757160AA82A0006314D /* Switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Switch.png; sourceTree = "<group>"; };
+		9F98F758160AA82A0006314D /* textbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbg.png; sourceTree = "<group>"; };
+		9F98F759160AA82A0006314D /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		9F98F75A160AA82A0006314D /* 关闭按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关闭按钮.png"; sourceTree = "<group>"; };
+		9F98F75B160AA82A0006314D /* 其他图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "其他图标.png"; sourceTree = "<group>"; };
+		9F98F75C160AA82A0006314D /* 列表上的按钮外框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表上的按钮外框.png"; sourceTree = "<group>"; };
+		9F98F75D160AA82A0006314D /* 列表背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表背景.png"; sourceTree = "<group>"; };
+		9F98F75E160AA82A0006314D /* 列表背景上的分割线.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表背景上的分割线.png"; sourceTree = "<group>"; };
+		9F98F75F160AA82A0006314D /* 列表高亮条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表高亮条.png"; sourceTree = "<group>"; };
+		9F98F760160AA82A0006314D /* 单选.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选.png"; sourceTree = "<group>"; };
+		9F98F761160AA82A0006314D /* 单选1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选1.png"; sourceTree = "<group>"; };
+		9F98F762160AA82A0006314D /* 单选框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选框.png"; sourceTree = "<group>"; };
+		9F98F763160AA82A0006314D /* 单选框点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选框点.png"; sourceTree = "<group>"; };
+		9F98F764160AA82A0006314D /* 复选框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复选框.png"; sourceTree = "<group>"; };
+		9F98F765160AA82A0006314D /* 复选框勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复选框勾.png"; sourceTree = "<group>"; };
+		9F98F766160AA82A0006314D /* 大弹出框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大弹出框.png"; sourceTree = "<group>"; };
+		9F98F767160AA82A0006314D /* 大弹出框上的分割线.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大弹出框上的分割线.png"; sourceTree = "<group>"; };
+		9F98F768160AA82A0006314D /* 按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮.png"; sourceTree = "<group>"; };
+		9F98F769160AA82A0006314D /* 搜索png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索png.png"; sourceTree = "<group>"; };
+		9F98F76A160AA82A0006314D /* 标题按钮-press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标题按钮-press.png"; sourceTree = "<group>"; };
+		9F98F76B160AA82A0006314D /* 标题按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标题按钮.png"; sourceTree = "<group>"; };
+		9F98F76C160AA82A0006314D /* 样本管理图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "样本管理图标.png"; sourceTree = "<group>"; };
+		9F98F76D160AA82A0006314D /* 统计.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "统计.png"; sourceTree = "<group>"; };
+		9F98F76E160AA82A0006314D /* 编辑框 一行.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑框 一行.png"; sourceTree = "<group>"; };
+		9F98F76F160AA82A0006314D /* 编辑框 表格.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑框 表格.png"; sourceTree = "<group>"; };
+		9F98F770160AA82A0006314D /* 背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景.png"; sourceTree = "<group>"; };
+		9F98F771160AA82A0006314D /* 退出图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出图标.png"; sourceTree = "<group>"; };
+		9F98F772160AA82A0006314D /* 问卷执行图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "问卷执行图标.png"; sourceTree = "<group>"; };
+		9F98F773160AA82A0006314D /* 项目管理图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "项目管理图标.png"; sourceTree = "<group>"; };
+		9F98F775160AA82A0006314D /* 启动等待界面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "启动等待界面.png"; sourceTree = "<group>"; };
+		9F98F776160AA82A0006314D /* 标志.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标志.png"; sourceTree = "<group>"; };
+		9F98F777160AA82A0006314D /* 登录背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录背景.png"; sourceTree = "<group>"; };
+		9F98F778160AA82A0006314D /* 登录页面专用复选框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面专用复选框.png"; sourceTree = "<group>"; };
+		9F98F779160AA82A0006314D /* 登录页面专用复选框勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面专用复选框勾.png"; sourceTree = "<group>"; };
+		9F98F77A160AA82A0006314D /* 登录页面复选框勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面复选框勾.png"; sourceTree = "<group>"; };
+		9F98F77B160AA82A0006314D /* 登录页面复选框背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面复选框背景.png"; sourceTree = "<group>"; };
+		9F98F77C160AA82A0006314D /* 登录页面底部菜单背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面底部菜单背景.png"; sourceTree = "<group>"; };
+		9F98F77D160AA82A0006314D /* 登录页面编辑框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面编辑框.png"; sourceTree = "<group>"; };
+		9F98F77E160AA82A0006314D /* 登陆页面LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登陆页面LOGO.png"; sourceTree = "<group>"; };
+		9F98F77F160AA82A0006314D /* 登陆页面按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登陆页面按钮.png"; sourceTree = "<group>"; };
+		9F98F780160AA82A0006314D /* 编辑框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑框.png"; sourceTree = "<group>"; };
+		9F98F781160AA82A0006314D /* 退出小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出小图标.png"; sourceTree = "<group>"; };
+		9F98F783160AA82A0006314D /* 二级图标主题应用.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级图标主题应用.png"; sourceTree = "<group>"; };
+		9F98F784160AA82A0006314D /* 二级图标关于.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级图标关于.png"; sourceTree = "<group>"; };
+		9F98F785160AA82A0006314D /* 二级图标版本更新.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级图标版本更新.png"; sourceTree = "<group>"; };
+		9F98F786160AA82A0006314D /* 二级图标系统设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级图标系统设置.png"; sourceTree = "<group>"; };
+		9F98F787160AA82A0006314D /* 二级图标终端注册.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级图标终端注册.png"; sourceTree = "<group>"; };
+		9F98F788160AA82A0006314D /* 其他二级菜单.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "其他二级菜单.png"; sourceTree = "<group>"; };
+		9F98F78A160AA82A0006314D /* 搜索按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索按钮.png"; sourceTree = "<group>"; };
+		9F98F78B160AA82A0006314D /* 选择按钮1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择按钮1.png"; sourceTree = "<group>"; };
+		9F98F78C160AA82A0006314D /* 选择按钮2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择按钮2.png"; sourceTree = "<group>"; };
+		9F98F78E160AA82A0006314D /* 上一题小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上一题小图标.png"; sourceTree = "<group>"; };
+		9F98F78F160AA82A0006314D /* 下一题小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下一题小图标.png"; sourceTree = "<group>"; };
+		9F98F790160AA82A0006314D /* 切换项目图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换项目图标.png"; sourceTree = "<group>"; };
+		9F98F791160AA82A0006314D /* 图钉.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "图钉.png"; sourceTree = "<group>"; };
+		9F98F792160AA82A0006314D /* 影片占位图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "影片占位图片.png"; sourceTree = "<group>"; };
+		9F98F793160AA82A0006314D /* 拍照图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "拍照图标.png"; sourceTree = "<group>"; };
+		9F98F794160AA82A0006314D /* 按钮线框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮线框.png"; sourceTree = "<group>"; };
+		9F98F795160AA82A0006314D /* 照片占位.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "照片占位.png"; sourceTree = "<group>"; };
+		9F98F796160AA82A0006314D /* 照片占位图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "照片占位图片.png"; sourceTree = "<group>"; };
+		9F98F797160AA82A0006314D /* 照片图片占位.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "照片图片占位.png"; sourceTree = "<group>"; };
+		9F98F798160AA82A0006314D /* 照片按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "照片按钮.png"; sourceTree = "<group>"; };
+		9F98F799160AA82A0006314D /* 答题记录1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "答题记录1.png"; sourceTree = "<group>"; };
+		9F98F79A160AA82A0006314D /* 答题记录2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "答题记录2.png"; sourceTree = "<group>"; };
+		9F98F79B160AA82A0006314D /* 进程1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进程1.png"; sourceTree = "<group>"; };
+		9F98F79C160AA82A0006314D /* 进程2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进程2.png"; sourceTree = "<group>"; };
+		9F98F79D160AA82A0006314D /* 进程条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进程条.png"; sourceTree = "<group>"; };
+		9F98F79E160AA82A0006314D /* 进程条背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进程条背景.png"; sourceTree = "<group>"; };
+		9F98F79F160AA82A0006314D /* 退出小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出小图标.png"; sourceTree = "<group>"; };
+		9F98F7A1160AA82A0006314D /* 上传答卷小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上传答卷小图标.png"; sourceTree = "<group>"; };
+		9F98F7A2160AA82A0006314D /* 二级图标上传答卷.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级图标上传答卷.png"; sourceTree = "<group>"; };
+		9F98F7A3160AA82A0006314D /* 二级图标在线下载.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级图标在线下载.png"; sourceTree = "<group>"; };
+		9F98F7A4160AA82A0006314D /* 二级图标垃圾文件管理.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级图标垃圾文件管理.png"; sourceTree = "<group>"; };
+		9F98F7A5160AA82A0006314D /* 二级图标数据导出.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级图标数据导出.png"; sourceTree = "<group>"; };
+		9F98F7A6160AA82A0006314D /* 二级图标离线导入.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级图标离线导入.png"; sourceTree = "<group>"; };
+		9F98F7A7160AA82A0006314D /* 二级图标项目概况.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级图标项目概况.png"; sourceTree = "<group>"; };
+		9F98F7A8160AA82A0006314D /* 在线下载中小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "在线下载中小图标.png"; sourceTree = "<group>"; };
+		9F98F7A9160AA82A0006314D /* 在线下载中进程1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "在线下载中进程1.png"; sourceTree = "<group>"; };
+		9F98F7AA160AA82A0006314D /* 在线下载中进程2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "在线下载中进程2.png"; sourceTree = "<group>"; };
+		9F98F7AB160AA82A0006314D /* 在线下载小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "在线下载小图标.png"; sourceTree = "<group>"; };
+		9F98F7AC160AA82A0006314D /* 按钮线框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮线框.png"; sourceTree = "<group>"; };
+		9F98F7AD160AA82A0006314D /* 新问卷图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新问卷图标.png"; sourceTree = "<group>"; };
+		9F98F7AE160AA82A0006314D /* 项目管理二级菜单.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "项目管理二级菜单.png"; sourceTree = "<group>"; };
+		9F98F7B1160AA82A0006314D /* 标志.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标志.png"; sourceTree = "<group>"; };
+		9F98F7B2160AA82A0006314D /* 登录页面专用复选框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面专用复选框.png"; sourceTree = "<group>"; };
+		9F98F7B3160AA82A0006314D /* 登录页面专用复选框勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面专用复选框勾.png"; sourceTree = "<group>"; };
+		9F98F7B4160AA82A0006314D /* 编辑框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑框.png"; sourceTree = "<group>"; };
+		9F98F7B6160AA82A0006314D /* TAB1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TAB1.png; sourceTree = "<group>"; };
+		9F98F7B7160AA82A0006314D /* TAB2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TAB2.png; sourceTree = "<group>"; };
+		9F98F7B8160AA82A0006314D /* TAB3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TAB3.png; sourceTree = "<group>"; };
+		9F98F7B9160AA82A0006314D /* 列表上的按钮外框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表上的按钮外框.png"; sourceTree = "<group>"; };
+		9F98F7BA160AA82A0006314D /* 失败小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "失败小图标.png"; sourceTree = "<group>"; };
+		9F98F7BB160AA82A0006314D /* 失败顶部条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "失败顶部条.png"; sourceTree = "<group>"; };
+		9F98F7BC160AA82A0006314D /* 开始访谈小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开始访谈小图标.png"; sourceTree = "<group>"; };
+		9F98F7BD160AA82A0006314D /* 成功小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "成功小图标.png"; sourceTree = "<group>"; };
+		9F98F7BE160AA82A0006314D /* 成功顶部条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "成功顶部条.png"; sourceTree = "<group>"; };
+		9F98F7BF160AA82A0006314D /* 未接触小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未接触小图标.png"; sourceTree = "<group>"; };
+		9F98F7C0160AA82A0006314D /* 未接触顶部条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未接触顶部条.png"; sourceTree = "<group>"; };
+		9F98F7C1160AA82A0006314D /* 查看答卷小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "查看答卷小图标.png"; sourceTree = "<group>"; };
+		9F98F7C2160AA82A0006314D /* 样本信息小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "样本信息小图标.png"; sourceTree = "<group>"; };
+		9F98F7C3160AA82A0006314D /* 样本回收小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "样本回收小图标.png"; sourceTree = "<group>"; };
+		9F98F7C5160AA82A0006314D /* icon-确定.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-确定.png"; sourceTree = "<group>"; };
+		9F98F7C6160AA82A0006314D /* icon-确定press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-确定press.png"; sourceTree = "<group>"; };
+		9F98F7C7160AA82A0006314D /* NEW小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NEW小图标.png"; sourceTree = "<group>"; };
+		9F98F7C8160AA82A0006314D /* 一级菜单按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "一级菜单按钮.png"; sourceTree = "<group>"; };
+		9F98F7C9160AA82A0006314D /* 一级菜单背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "一级菜单背景.png"; sourceTree = "<group>"; };
+		9F98F7CA160AA82A0006314D /* 上传文件小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上传文件小图标.png"; sourceTree = "<group>"; };
+		9F98F7CB160AA82A0006314D /* 上传进行中小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上传进行中小图标.png"; sourceTree = "<group>"; };
+		9F98F7CC160AA82A0006314D /* 下载进行中小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下载进行中小图标.png"; sourceTree = "<group>"; };
+		9F98F7CD160AA82A0006314D /* 二级菜单活动板的分割线.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级菜单活动板的分割线.png"; sourceTree = "<group>"; };
+		9F98F7CE160AA82A0006314D /* 二级菜单活动板的箭头右.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级菜单活动板的箭头右.png"; sourceTree = "<group>"; };
+		9F98F7CF160AA82A0006314D /* 二级菜单活动板的箭头左.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级菜单活动板的箭头左.png"; sourceTree = "<group>"; };
+		9F98F7D0160AA82A0006314D /* 二级菜单活动背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级菜单活动背景.png"; sourceTree = "<group>"; };
+		9F98F7D1160AA82A0006314D /* 切换项目小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换项目小图标.png"; sourceTree = "<group>"; };
+		9F98F7D2160AA82A0006314D /* 单选框点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选框点.png"; sourceTree = "<group>"; };
+		9F98F7D3160AA82A0006314D /* 单选框背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选框背景.png"; sourceTree = "<group>"; };
+		9F98F7D4160AA82A0006314D /* 在线下载小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "在线下载小图标.png"; sourceTree = "<group>"; };
+		9F98F7D5160AA82A0006314D /* 复选框勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复选框勾.png"; sourceTree = "<group>"; };
+		9F98F7D6160AA82A0006314D /* 复选框背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复选框背景.png"; sourceTree = "<group>"; };
+		9F98F7D7160AA82A0006314D /* 小弹出框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小弹出框.png"; sourceTree = "<group>"; };
+		9F98F7D8160AA82A0006314D /* 开始访问小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开始访问小图标.png"; sourceTree = "<group>"; };
+		9F98F7D9160AA82A0006314D /* 弹出框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "弹出框.png"; sourceTree = "<group>"; };
+		9F98F7DA160AA82A0006314D /* 未接触.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未接触.png"; sourceTree = "<group>"; };
+		9F98F7DB160AA82A0006314D /* 查看答卷小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "查看答卷小图标.png"; sourceTree = "<group>"; };
+		9F98F7DC160AA82A0006314D /* 标签1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标签1.png"; sourceTree = "<group>"; };
+		9F98F7DD160AA82A0006314D /* 标签2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标签2.png"; sourceTree = "<group>"; };
+		9F98F7DE160AA82A0006314D /* 标签3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标签3.png"; sourceTree = "<group>"; };
+		9F98F7DF160AA82A0006314D /* 标签4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标签4.png"; sourceTree = "<group>"; };
+		9F98F7E0160AA82A0006314D /* 样本信息小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "样本信息小图标.png"; sourceTree = "<group>"; };
+		9F98F7E1160AA82A0006314D /* 样本回收小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "样本回收小图标.png"; sourceTree = "<group>"; };
+		9F98F7E2160AA82A0006314D /* 正文中的按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正文中的按钮.png"; sourceTree = "<group>"; };
+		9F98F7E3160AA82A0006314D /* 正文背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正文背景.png"; sourceTree = "<group>"; };
+		9F98F7E4160AA82A0006314D /* 正文背景左侧的装饰凹槽.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正文背景左侧的装饰凹槽.png"; sourceTree = "<group>"; };
+		9F98F7E5160AA82A0006314D /* 访问失败.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "访问失败.png"; sourceTree = "<group>"; };
+		9F98F7E6160AA82A0006314D /* 访问成功.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "访问成功.png"; sourceTree = "<group>"; };
+		9F98F7E7160AA82A0006314D /* 返回小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回小图标.png"; sourceTree = "<group>"; };
+		9F98F7E8160AA82A0006314D /* 退出小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出小图标.png"; sourceTree = "<group>"; };
+		9F98F7E9160AA82A0006314D /* 顶部条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顶部条.png"; sourceTree = "<group>"; };
+		9F98F885160AA8420006314D /* 按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮.png"; sourceTree = "<group>"; };
+		9F98F886160AA8420006314D /* 按钮线框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮线框.png"; sourceTree = "<group>"; };
+		9F98F887160AA8420006314D /* 背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景.png"; sourceTree = "<group>"; };
+		9F98F888160AA8420006314D /* 编辑框 表格.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑框 表格.png"; sourceTree = "<group>"; };
+		9F98F889160AA8420006314D /* 编辑框 一行.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑框 一行.png"; sourceTree = "<group>"; };
+		9F98F88A160AA8420006314D /* 大弹出框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大弹出框.png"; sourceTree = "<group>"; };
+		9F98F88B160AA8420006314D /* 大弹出框上的分割线.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大弹出框上的分割线.png"; sourceTree = "<group>"; };
+		9F98F88C160AA8420006314D /* 单选框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选框.png"; sourceTree = "<group>"; };
+		9F98F88D160AA8420006314D /* 单选框点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选框点.png"; sourceTree = "<group>"; };
+		9F98F88E160AA8420006314D /* 二级菜单聚焦.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级菜单聚焦.png"; sourceTree = "<group>"; };
+		9F98F88F160AA8420006314D /* 复选框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复选框.png"; sourceTree = "<group>"; };
+		9F98F890160AA8420006314D /* 复选框勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复选框勾.png"; sourceTree = "<group>"; };
+		9F98F891160AA8420006314D /* 关闭按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关闭按钮.png"; sourceTree = "<group>"; };
+		9F98F892160AA8420006314D /* 列表背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表背景.png"; sourceTree = "<group>"; };
+		9F98F893160AA8420006314D /* 列表背景上的分割线.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表背景上的分割线.png"; sourceTree = "<group>"; };
+		9F98F894160AA8420006314D /* 列表高亮条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表高亮条.png"; sourceTree = "<group>"; };
+		9F98F895160AA8420006314D /* 其他图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "其他图标.png"; sourceTree = "<group>"; };
+		9F98F896160AA8420006314D /* 切换项目图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换项目图标.png"; sourceTree = "<group>"; };
+		9F98F897160AA8420006314D /* 统计.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "统计.png"; sourceTree = "<group>"; };
+		9F98F898160AA8420006314D /* 退出图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出图标.png"; sourceTree = "<group>"; };
+		9F98F899160AA8420006314D /* 问卷执行图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "问卷执行图标.png"; sourceTree = "<group>"; };
+		9F98F89A160AA8420006314D /* 项目管理图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "项目管理图标.png"; sourceTree = "<group>"; };
+		9F98F89B160AA8420006314D /* 小弹出框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小弹出框.png"; sourceTree = "<group>"; };
+		9F98F89C160AA8420006314D /* 样本管理图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "样本管理图标.png"; sourceTree = "<group>"; };
+		9F98F89D160AA8420006314D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9F9E8817160C18E3001D3E57 /* 其他二级菜单01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "其他二级菜单01.png"; sourceTree = "<group>"; };
+		9F9E8818160C18E3001D3E57 /* 其他二级菜单02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "其他二级菜单02.png"; sourceTree = "<group>"; };
+		9F9E8819160C18E3001D3E57 /* 项目管理二级菜单01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "项目管理二级菜单01.png"; sourceTree = "<group>"; };
+		9F9E881A160C18E3001D3E57 /* 项目管理二级菜单02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "项目管理二级菜单02.png"; sourceTree = "<group>"; };
+		FC81D44715F089DA0051F035 /* ProjectListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectListView.h; sourceTree = "<group>"; };
+		FC81D44815F089DA0051F035 /* ProjectListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectListView.m; sourceTree = "<group>"; };
+		FC81D44915F089DA0051F035 /* ProjectListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectListView.xib; sourceTree = "<group>"; };
+		FC81D44C15F089EA0051F035 /* SampleListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleListView.h; sourceTree = "<group>"; };
+		FC81D44D15F089EA0051F035 /* SampleListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleListView.m; sourceTree = "<group>"; };
+		FC81D44E15F089EA0051F035 /* SampleListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleListView.xib; sourceTree = "<group>"; };
+		FC81D45115F089F50051F035 /* SurveyExcuteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyExcuteView.h; sourceTree = "<group>"; };
+		FC81D45215F089F50051F035 /* SurveyExcuteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyExcuteView.m; sourceTree = "<group>"; };
+		FC81D45315F089F50051F035 /* SurveyExcuteView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyExcuteView.xib; sourceTree = "<group>"; };
+		FC81D45615F08A060051F035 /* SampleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleCell.xib; sourceTree = "<group>"; };
+		FC81D45815F08A240051F035 /* nankang-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "nankang-Info.plist"; path = "nankang/nankang-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FC81D45B15F08A3D0051F035 /* DeleteFilesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeleteFilesView.h; sourceTree = "<group>"; };
+		FC81D45C15F08A3D0051F035 /* DeleteFilesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeleteFilesView.m; sourceTree = "<group>"; };
+		FC81D45D15F08A3D0051F035 /* DeleteFilesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeleteFilesView.xib; sourceTree = "<group>"; };
+		FC81D45E15F08A3D0051F035 /* ExportView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportView.h; sourceTree = "<group>"; };
+		FC81D45F15F08A3D0051F035 /* ExportView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExportView.m; sourceTree = "<group>"; };
+		FC81D46015F08A3D0051F035 /* ExportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExportView.xib; sourceTree = "<group>"; };
+		FC81D46115F08A3D0051F035 /* ImportView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportView.h; sourceTree = "<group>"; };
+		FC81D46215F08A3D0051F035 /* ImportView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportView.m; sourceTree = "<group>"; };
+		FC81D46315F08A3D0051F035 /* ImportView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImportView.xib; sourceTree = "<group>"; };
+		FC81D46415F08A3D0051F035 /* ProjectInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectInfoView.h; sourceTree = "<group>"; };
+		FC81D46515F08A3D0051F035 /* ProjectInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectInfoView.m; sourceTree = "<group>"; };
+		FC81D46615F08A3D0051F035 /* ProjectInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectInfoView.xib; sourceTree = "<group>"; };
+		FC81D46715F08A3D0051F035 /* ProjectSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectSelectView.h; sourceTree = "<group>"; };
+		FC81D46815F08A3D0051F035 /* ProjectSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectSelectView.m; sourceTree = "<group>"; };
+		FC81D46915F08A3D0051F035 /* ProjectSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectSelectView.xib; sourceTree = "<group>"; };
+		FC81D46A15F08A3D0051F035 /* SampleInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleInfoView.h; sourceTree = "<group>"; };
+		FC81D46B15F08A3D0051F035 /* SampleInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleInfoView.m; sourceTree = "<group>"; };
+		FC81D46C15F08A3D0051F035 /* SampleInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleInfoView.xib; sourceTree = "<group>"; };
+		FC81D46D15F08A3D0051F035 /* SampleSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleSelectView.h; sourceTree = "<group>"; };
+		FC81D46E15F08A3D0051F035 /* SampleSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleSelectView.m; sourceTree = "<group>"; };
+		FC81D46F15F08A3D0051F035 /* SampleSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleSelectView.xib; sourceTree = "<group>"; };
+		FC81D47015F08A3D0051F035 /* SettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsView.h; sourceTree = "<group>"; };
+		FC81D47115F08A3D0051F035 /* SettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsView.m; sourceTree = "<group>"; };
+		FC81D47215F08A3D0051F035 /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+		FC81D47315F08A3D0051F035 /* ThemeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeView.h; sourceTree = "<group>"; };
+		FC81D47415F08A3D0051F035 /* ThemeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeView.m; sourceTree = "<group>"; };
+		FC81D47515F08A3D0051F035 /* ThemeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThemeView.xib; sourceTree = "<group>"; };
+		FC81D49015F0AF460051F035 /* Publicdef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Publicdef.h; sourceTree = "<group>"; };
+		FC8C197816080D8C0040BA9C /* UploadSampleSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadSampleSelectView.h; sourceTree = "<group>"; };
+		FC8C197916080D8C0040BA9C /* UploadSampleSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadSampleSelectView.m; sourceTree = "<group>"; };
+		FC8C197A16080D8D0040BA9C /* UploadSampleSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadSampleSelectView.xib; sourceTree = "<group>"; };
+		FC8F998A15F8B2DB003A1208 /* BFormQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BFormQuestionView.h; sourceTree = "<group>"; };
+		FC8F998B15F8B2DB003A1208 /* BFormQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BFormQuestionView.m; sourceTree = "<group>"; };
+		FC8F998C15F8B2DB003A1208 /* MBlankQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBlankQuestionView.h; sourceTree = "<group>"; };
+		FC8F998D15F8B2DB003A1208 /* MBlankQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBlankQuestionView.m; sourceTree = "<group>"; };
+		FC8F998E15F8B2DB003A1208 /* MChoiceOrderQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MChoiceOrderQuestionView.h; sourceTree = "<group>"; };
+		FC8F998F15F8B2DB003A1208 /* MChoiceOrderQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MChoiceOrderQuestionView.m; sourceTree = "<group>"; };
+		FC8F999015F8B2DB003A1208 /* MFormQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFormQuestionView.h; sourceTree = "<group>"; };
+		FC8F999115F8B2DB003A1208 /* MFormQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFormQuestionView.m; sourceTree = "<group>"; };
+		FC992E4A15F4A0CA00E48D12 /* StatisticView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticView.h; sourceTree = "<group>"; };
+		FC992E4B15F4A0CA00E48D12 /* StatisticView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticView.m; sourceTree = "<group>"; };
+		FC992E4C15F4A0CB00E48D12 /* StatisticView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatisticView.xib; sourceTree = "<group>"; };
+		FCB72C371609D7D000EA51DB /* 按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "按钮.png"; sourceTree = "<group>"; };
+		FCB72C381609D7D000EA51DB /* 背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景.png"; sourceTree = "<group>"; };
+		FCB72C391609D7D000EA51DB /* 编辑框 表格.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑框 表格.png"; sourceTree = "<group>"; };
+		FCB72C3A1609D7D000EA51DB /* 编辑框 一行.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑框 一行.png"; sourceTree = "<group>"; };
+		FCB72C3B1609D7D000EA51DB /* 标题按钮-press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标题按钮-press.png"; sourceTree = "<group>"; };
+		FCB72C3C1609D7D000EA51DB /* 标题按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标题按钮.png"; sourceTree = "<group>"; };
+		FCB72C3D1609D7D000EA51DB /* 大弹出框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大弹出框.png"; sourceTree = "<group>"; };
+		FCB72C3E1609D7D000EA51DB /* 大弹出框上的分割线.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大弹出框上的分割线.png"; sourceTree = "<group>"; };
+		FCB72C3F1609D7D000EA51DB /* 单选.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选.png"; sourceTree = "<group>"; };
+		FCB72C401609D7D000EA51DB /* 单选1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选1.png"; sourceTree = "<group>"; };
+		FCB72C411609D7D000EA51DB /* 单选框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选框.png"; sourceTree = "<group>"; };
+		FCB72C421609D7D000EA51DB /* 单选框点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选框点.png"; sourceTree = "<group>"; };
+		FCB72C431609D7D000EA51DB /* 复选框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复选框.png"; sourceTree = "<group>"; };
+		FCB72C441609D7D000EA51DB /* 复选框勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复选框勾.png"; sourceTree = "<group>"; };
+		FCB72C451609D7D000EA51DB /* 关闭按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关闭按钮.png"; sourceTree = "<group>"; };
+		FCB72C461609D7D000EA51DB /* 列表背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表背景.png"; sourceTree = "<group>"; };
+		FCB72C471609D7D000EA51DB /* 列表背景上的分割线.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表背景上的分割线.png"; sourceTree = "<group>"; };
+		FCB72C481609D7D000EA51DB /* 列表高亮条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表高亮条.png"; sourceTree = "<group>"; };
+		FCB72C491609D7D000EA51DB /* 列表上的按钮外框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "列表上的按钮外框.png"; sourceTree = "<group>"; };
+		FCB72C4A1609D7D000EA51DB /* 其他图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "其他图标.png"; sourceTree = "<group>"; };
+		FCB72C4B1609D7D000EA51DB /* 搜索png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索png.png"; sourceTree = "<group>"; };
+		FCB72C4C1609D7D000EA51DB /* 统计.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "统计.png"; sourceTree = "<group>"; };
+		FCB72C4D1609D7D000EA51DB /* 退出图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出图标.png"; sourceTree = "<group>"; };
+		FCB72C4E1609D7D000EA51DB /* 问卷执行图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "问卷执行图标.png"; sourceTree = "<group>"; };
+		FCB72C4F1609D7D000EA51DB /* 项目管理图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "项目管理图标.png"; sourceTree = "<group>"; };
+		FCB72C501609D7D000EA51DB /* 样本管理图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "样本管理图标.png"; sourceTree = "<group>"; };
+		FCB72C6D1609D7F700EA51DB /* 启动等待界面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "启动等待界面.png"; sourceTree = "<group>"; };
+		FCB72C6E1609D7F700EA51DB /* 标志.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标志.png"; sourceTree = "<group>"; };
+		FCB72C6F1609D7F700EA51DB /* 登录背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录背景.png"; sourceTree = "<group>"; };
+		FCB72C701609D7F700EA51DB /* 登录页面专用复选框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面专用复选框.png"; sourceTree = "<group>"; };
+		FCB72C711609D7F700EA51DB /* 登录页面专用复选框勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面专用复选框勾.png"; sourceTree = "<group>"; };
+		FCB72C721609D7F700EA51DB /* 登录页面复选框勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面复选框勾.png"; sourceTree = "<group>"; };
+		FCB72C731609D7F700EA51DB /* 登录页面复选框背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面复选框背景.png"; sourceTree = "<group>"; };
+		FCB72C741609D7F700EA51DB /* 登录页面底部菜单背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面底部菜单背景.png"; sourceTree = "<group>"; };
+		FCB72C751609D7F700EA51DB /* 登录页面编辑框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登录页面编辑框.png"; sourceTree = "<group>"; };
+		FCB72C761609D7F700EA51DB /* 登陆页面LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登陆页面LOGO.png"; sourceTree = "<group>"; };
+		FCB72C771609D7F700EA51DB /* 登陆页面按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登陆页面按钮.png"; sourceTree = "<group>"; };
+		FCB72C781609D7F700EA51DB /* 编辑框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "编辑框.png"; sourceTree = "<group>"; };
+		FCB72C791609D7F700EA51DB /* 退出小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出小图标.png"; sourceTree = "<group>"; };
+		FCB72C7C1609D7F700EA51DB /* 搜索按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "搜索按钮.png"; sourceTree = "<group>"; };
+		FCB72C7D1609D7F700EA51DB /* 选择按钮1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择按钮1.png"; sourceTree = "<group>"; };
+		FCB72C7E1609D7F700EA51DB /* 选择按钮2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "选择按钮2.png"; sourceTree = "<group>"; };
+		FCB72C801609D7F700EA51DB /* 影片占位图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "影片占位图片.png"; sourceTree = "<group>"; };
+		FCB72C811609D7F700EA51DB /* 拍照图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "拍照图标.png"; sourceTree = "<group>"; };
+		FCB72C821609D7F700EA51DB /* 照片占位图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "照片占位图片.png"; sourceTree = "<group>"; };
+		FCB72C831609D7F700EA51DB /* 进程条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进程条.png"; sourceTree = "<group>"; };
+		FCB72C841609D7F700EA51DB /* 进程条背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进程条背景.png"; sourceTree = "<group>"; };
+		FCB72C861609D7F700EA51DB /* 上传答卷小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上传答卷小图标.png"; sourceTree = "<group>"; };
+		FCB72C871609D7F700EA51DB /* 在线下载小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "在线下载小图标.png"; sourceTree = "<group>"; };
+		FCB72C881609D7F700EA51DB /* 新问卷图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "新问卷图标.png"; sourceTree = "<group>"; };
+		FCB72C8B1609D7F700EA51DB /* icon-确定.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-确定.png"; sourceTree = "<group>"; };
+		FCB72C8C1609D7F700EA51DB /* icon-确定press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-确定press.png"; sourceTree = "<group>"; };
+		FCB72C8D1609D7F700EA51DB /* NEW小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NEW小图标.png"; sourceTree = "<group>"; };
+		FCB72C8E1609D7F700EA51DB /* 一级菜单按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "一级菜单按钮.png"; sourceTree = "<group>"; };
+		FCB72C8F1609D7F700EA51DB /* 一级菜单背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "一级菜单背景.png"; sourceTree = "<group>"; };
+		FCB72C901609D7F700EA51DB /* 上传文件小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上传文件小图标.png"; sourceTree = "<group>"; };
+		FCB72C911609D7F700EA51DB /* 上传进行中小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "上传进行中小图标.png"; sourceTree = "<group>"; };
+		FCB72C921609D7F700EA51DB /* 下载进行中小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "下载进行中小图标.png"; sourceTree = "<group>"; };
+		FCB72C931609D7F700EA51DB /* 二级菜单活动板的分割线.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级菜单活动板的分割线.png"; sourceTree = "<group>"; };
+		FCB72C941609D7F700EA51DB /* 二级菜单活动板的箭头右.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级菜单活动板的箭头右.png"; sourceTree = "<group>"; };
+		FCB72C951609D7F700EA51DB /* 二级菜单活动板的箭头左.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级菜单活动板的箭头左.png"; sourceTree = "<group>"; };
+		FCB72C961609D7F700EA51DB /* 二级菜单活动背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "二级菜单活动背景.png"; sourceTree = "<group>"; };
+		FCB72C971609D7F700EA51DB /* 切换项目小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换项目小图标.png"; sourceTree = "<group>"; };
+		FCB72C981609D7F700EA51DB /* 单选框点.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选框点.png"; sourceTree = "<group>"; };
+		FCB72C991609D7F700EA51DB /* 单选框背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "单选框背景.png"; sourceTree = "<group>"; };
+		FCB72C9A1609D7F700EA51DB /* 在线下载小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "在线下载小图标.png"; sourceTree = "<group>"; };
+		FCB72C9B1609D7F700EA51DB /* 复选框勾.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复选框勾.png"; sourceTree = "<group>"; };
+		FCB72C9C1609D7F700EA51DB /* 复选框背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "复选框背景.png"; sourceTree = "<group>"; };
+		FCB72C9D1609D7F700EA51DB /* 小弹出框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "小弹出框.png"; sourceTree = "<group>"; };
+		FCB72C9E1609D7F700EA51DB /* 开始访问小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开始访问小图标.png"; sourceTree = "<group>"; };
+		FCB72C9F1609D7F700EA51DB /* 弹出框.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "弹出框.png"; sourceTree = "<group>"; };
+		FCB72CA01609D7F700EA51DB /* 未接触.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "未接触.png"; sourceTree = "<group>"; };
+		FCB72CA11609D7F700EA51DB /* 查看答卷小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "查看答卷小图标.png"; sourceTree = "<group>"; };
+		FCB72CA21609D7F700EA51DB /* 标签1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标签1.png"; sourceTree = "<group>"; };
+		FCB72CA31609D7F700EA51DB /* 标签2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标签2.png"; sourceTree = "<group>"; };
+		FCB72CA41609D7F700EA51DB /* 标签3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标签3.png"; sourceTree = "<group>"; };
+		FCB72CA51609D7F700EA51DB /* 标签4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "标签4.png"; sourceTree = "<group>"; };
+		FCB72CA61609D7F700EA51DB /* 样本信息小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "样本信息小图标.png"; sourceTree = "<group>"; };
+		FCB72CA71609D7F700EA51DB /* 样本回收小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "样本回收小图标.png"; sourceTree = "<group>"; };
+		FCB72CA81609D7F700EA51DB /* 正文中的按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正文中的按钮.png"; sourceTree = "<group>"; };
+		FCB72CA91609D7F700EA51DB /* 正文背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正文背景.png"; sourceTree = "<group>"; };
+		FCB72CAA1609D7F700EA51DB /* 正文背景左侧的装饰凹槽.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正文背景左侧的装饰凹槽.png"; sourceTree = "<group>"; };
+		FCB72CAB1609D7F700EA51DB /* 访问失败.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "访问失败.png"; sourceTree = "<group>"; };
+		FCB72CAC1609D7F700EA51DB /* 访问成功.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "访问成功.png"; sourceTree = "<group>"; };
+		FCB72CAD1609D7F700EA51DB /* 返回小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回小图标.png"; sourceTree = "<group>"; };
+		FCB72CAE1609D7F700EA51DB /* 退出小图标.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出小图标.png"; sourceTree = "<group>"; };
+		FCB72CAF1609D7F700EA51DB /* 顶部条.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顶部条.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3787BD0D15B12D6B00C8F212 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378BB4AF15E5CB190036675D /* libunitrueframework.a in Frameworks */,
+				24D7422915B7D995002D9771 /* MobileCoreServices.framework in Frameworks */,
+				37B590CB15B14198006080FF /* SystemConfiguration.framework in Frameworks */,
+				24D7422715B7D8A1002D9771 /* MessageUI.framework in Frameworks */,
+				24D7422515B7D896002D9771 /* CoreLocation.framework in Frameworks */,
+				37B590CD15B141A0006080FF /* QuartzCore.framework in Frameworks */,
+				37B590C915B1418E006080FF /* libsqlite3.dylib in Frameworks */,
+				37B590C715B14179006080FF /* CFNetwork.framework in Frameworks */,
+				37B590C515B1416A006080FF /* libz.dylib in Frameworks */,
+				37B590C315B14161006080FF /* libicucore.dylib in Frameworks */,
+				37B590C115B14158006080FF /* libxml2.dylib in Frameworks */,
+				37B590BF15B1414E006080FF /* Security.framework in Frameworks */,
+				3787BD1515B12D6B00C8F212 /* UIKit.framework in Frameworks */,
+				3787BD1715B12D6B00C8F212 /* Foundation.framework in Frameworks */,
+				3787BD1915B12D6B00C8F212 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		373C02A615DE34BA00979543 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				373C02A715DE34BA00979543 /* MChoiceQuestionView.h */,
+				373C02A815DE34BA00979543 /* MChoiceQuestionView.m */,
+				FC8F998A15F8B2DB003A1208 /* BFormQuestionView.h */,
+				FC8F998B15F8B2DB003A1208 /* BFormQuestionView.m */,
+				FC8F998C15F8B2DB003A1208 /* MBlankQuestionView.h */,
+				FC8F998D15F8B2DB003A1208 /* MBlankQuestionView.m */,
+				FC8F998E15F8B2DB003A1208 /* MChoiceOrderQuestionView.h */,
+				FC8F998F15F8B2DB003A1208 /* MChoiceOrderQuestionView.m */,
+				FC8F999015F8B2DB003A1208 /* MFormQuestionView.h */,
+				FC8F999115F8B2DB003A1208 /* MFormQuestionView.m */,
+				373C02A915DE34BA00979543 /* QuestBaseViewController.h */,
+				373C02AA15DE34BA00979543 /* QuestBaseViewController.m */,
+				373C02AB15DE34BA00979543 /* QuestionBase.h */,
+				373C02AC15DE34BA00979543 /* QuestionBase.m */,
+				373C02AD15DE34BA00979543 /* SBlankQuestionView.h */,
+				373C02AE15DE34BA00979543 /* SBlankQuestionView.m */,
+				373C02AF15DE34BA00979543 /* SChoiceQuestionView.h */,
+				373C02B015DE34BA00979543 /* SChoiceQuestionView.m */,
+				373C02B115DE34BA00979543 /* SFormQuestionView.h */,
+				373C02B215DE34BA00979543 /* SFormQuestionView.m */,
+				373C02B315DE34BA00979543 /* SurveyManager.h */,
+				373C02B415DE34BA00979543 /* SurveyManager.m */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		3787BD0515B12D6B00C8F212 = {
+			isa = PBXGroup;
+			children = (
+				378BB4AE15E5CB190036675D /* libunitrueframework.a */,
+				3787BD1A15B12D6B00C8F212 /* nankang */,
+				3787BD1315B12D6B00C8F212 /* Frameworks */,
+				3787BD1115B12D6B00C8F212 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3787BD1115B12D6B00C8F212 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3787BD1015B12D6B00C8F212 /* nankang.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3787BD1315B12D6B00C8F212 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24D7422815B7D995002D9771 /* MobileCoreServices.framework */,
+				24D7422615B7D8A1002D9771 /* MessageUI.framework */,
+				24D7422415B7D896002D9771 /* CoreLocation.framework */,
+				37B590CC15B141A0006080FF /* QuartzCore.framework */,
+				37B590CA15B14198006080FF /* SystemConfiguration.framework */,
+				37B590C815B1418E006080FF /* libsqlite3.dylib */,
+				37B590C615B14179006080FF /* CFNetwork.framework */,
+				37B590C415B1416A006080FF /* libz.dylib */,
+				37B590C215B14161006080FF /* libicucore.dylib */,
+				37B590C015B14158006080FF /* libxml2.dylib */,
+				37B590BE15B1414E006080FF /* Security.framework */,
+				37B5909315B12DD2006080FF /* libunitrueframework.a */,
+				3787BD1415B12D6B00C8F212 /* UIKit.framework */,
+				3787BD1615B12D6B00C8F212 /* Foundation.framework */,
+				3787BD1815B12D6B00C8F212 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3787BD1A15B12D6B00C8F212 /* nankang */ = {
+			isa = PBXGroup;
+			children = (
+				373C02A615DE34BA00979543 /* Survey */,
+				37B55E7515D62BE3004D4DE9 /* Account */,
+				3787BD2315B12D6B00C8F212 /* AppDelegate.h */,
+				3787BD2415B12D6B00C8F212 /* AppDelegate.m */,
+				3787BD1B15B12D6B00C8F212 /* Supporting Files */,
+				37B55E7B15D62BF9004D4DE9 /* RootViewController.h */,
+				37B55E7C15D62BF9004D4DE9 /* RootViewController.m */,
+				37B55E7D15D62BF9004D4DE9 /* RootViewController.xib */,
+				FC81D49015F0AF460051F035 /* Publicdef.h */,
+				FC81D44715F089DA0051F035 /* ProjectListView.h */,
+				FC81D44815F089DA0051F035 /* ProjectListView.m */,
+				FC81D44915F089DA0051F035 /* ProjectListView.xib */,
+				FC81D45A15F08A3D0051F035 /* ModuleViews */,
+				FC81D44C15F089EA0051F035 /* SampleListView.h */,
+				FC81D44D15F089EA0051F035 /* SampleListView.m */,
+				FC81D44E15F089EA0051F035 /* SampleListView.xib */,
+				FC81D45115F089F50051F035 /* SurveyExcuteView.h */,
+				FC81D45215F089F50051F035 /* SurveyExcuteView.m */,
+				FC81D45315F089F50051F035 /* SurveyExcuteView.xib */,
+				FC992E4A15F4A0CA00E48D12 /* StatisticView.h */,
+				FC992E4B15F4A0CA00E48D12 /* StatisticView.m */,
+				FC992E4C15F4A0CB00E48D12 /* StatisticView.xib */,
+				37B55E8015D64985004D4DE9 /* Resources */,
+			);
+			path = nankang;
+			sourceTree = "<group>";
+		};
+		3787BD1B15B12D6B00C8F212 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3787BD1C15B12D6B00C8F212 /* nankang-Info.plist */,
+				3787BD1D15B12D6B00C8F212 /* InfoPlist.strings */,
+				3787BD2015B12D6B00C8F212 /* main.m */,
+				3787BD2215B12D6B00C8F212 /* nankang-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37B55E7515D62BE3004D4DE9 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				FC81D45815F08A240051F035 /* nankang-Info.plist */,
+				37B55E7615D62BE3004D4DE9 /* LoginViewController.h */,
+				37B55E7715D62BE3004D4DE9 /* LoginViewController.m */,
+				37B55E7815D62BE3004D4DE9 /* LoginViewController.xib */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		37B55E8015D64985004D4DE9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+<<<<<<< .mine
+				9F98F885160AA8420006314D /* 按钮.png */,
+				9F98F886160AA8420006314D /* 按钮线框.png */,
+				9F98F887160AA8420006314D /* 背景.png */,
+				9F98F888160AA8420006314D /* 编辑框 表格.png */,
+				9F98F889160AA8420006314D /* 编辑框 一行.png */,
+				9F98F88A160AA8420006314D /* 大弹出框.png */,
+				9F98F88B160AA8420006314D /* 大弹出框上的分割线.png */,
+				9F98F88C160AA8420006314D /* 单选框.png */,
+				9F98F88D160AA8420006314D /* 单选框点.png */,
+				9F98F88E160AA8420006314D /* 二级菜单聚焦.png */,
+				9F98F88F160AA8420006314D /* 复选框.png */,
+				9F98F890160AA8420006314D /* 复选框勾.png */,
+				9F98F891160AA8420006314D /* 关闭按钮.png */,
+				9F98F892160AA8420006314D /* 列表背景.png */,
+				9F98F893160AA8420006314D /* 列表背景上的分割线.png */,
+				9F98F894160AA8420006314D /* 列表高亮条.png */,
+				9F98F895160AA8420006314D /* 其他图标.png */,
+				9F98F896160AA8420006314D /* 切换项目图标.png */,
+				9F98F897160AA8420006314D /* 统计.png */,
+				9F98F898160AA8420006314D /* 退出图标.png */,
+				9F98F899160AA8420006314D /* 问卷执行图标.png */,
+				9F98F89A160AA8420006314D /* 项目管理图标.png */,
+				9F98F89B160AA8420006314D /* 小弹出框.png */,
+				9F98F89C160AA8420006314D /* 样本管理图标.png */,
+				9F98F89D160AA8420006314D /* Default.png */,
+				9F98F746160AA82A0006314D /* Images */,
+				9F98F774160AA82A0006314D /* 登录页面 */,
+				9F98F782160AA82A0006314D /* 其他 */,
+				9F98F789160AA82A0006314D /* 统计 */,
+				9F98F78D160AA82A0006314D /* 问卷 */,
+				9F98F7A0160AA82A0006314D /* 项目 */,
+				9F98F7AF160AA82A0006314D /* 登录 */,
+				9F98F7B5160AA82A0006314D /* 样本 */,
+				9F98F7C4160AA82A0006314D /* 主页 */,
+=======
+				FCB72C6C1609D7F700EA51DB /* 登录页面 */,
+				FCB72C7A1609D7F700EA51DB /* 其他 */,
+				FCB72C7B1609D7F700EA51DB /* 统计 */,
+				FCB72C7F1609D7F700EA51DB /* 问卷 */,
+				FCB72C851609D7F700EA51DB /* 项目 */,
+				FCB72C891609D7F700EA51DB /* 样本 */,
+				FCB72C8A1609D7F700EA51DB /* 主页 */,
+>>>>>>> .r255
+				37B55E8115D64985004D4DE9 /* cells */,
+				37B55E8715D64985004D4DE9 /* ICON */,
+				37B55E8C15D64985004D4DE9 /* provinces.xml */,
+				37B55E8D15D64985004D4DE9 /* sur.sur */,
+				37B55E8E15D64985004D4DE9 /* test.html */,
+				37B55E8F15D64985004D4DE9 /* test1.html */,
+				37B55EA615D64985004D4DE9 /* 民生问卷.sur */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		37B55E8115D64985004D4DE9 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				FC81D45615F08A060051F035 /* SampleCell.xib */,
+				37B55EC815D64BC6004D4DE9 /* ProjectCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		9F98F746160AA82A0006314D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+<<<<<<< .mine
+				9F98F747160AA82A0006314D /* back.png */,
+				9F98F748160AA82A0006314D /* BG.png */,
+				9F98F749160AA82A0006314D /* iconDownload.png */,
+				9F98F74A160AA82A0006314D /* iconinformation.png */,
+				9F98F74B160AA82A0006314D /* iconinterview.png */,
+				9F98F74C160AA82A0006314D /* iconQuestionnaire.png */,
+				9F98F74D160AA82A0006314D /* iconRecovery.png */,
+				9F98F74E160AA82A0006314D /* iconUpload.png */,
+				9F98F74F160AA82A0006314D /* Inputbox.png */,
+				9F98F750160AA82A0006314D /* logo.png */,
+				9F98F751160AA82A0006314D /* menubg1.png */,
+				9F98F752160AA82A0006314D /* menubgarrowleft.png */,
+				9F98F753160AA82A0006314D /* menubgarrowright.png */,
+				9F98F754160AA82A0006314D /* popup.png */,
+				9F98F755160AA82A0006314D /* signincheckbox.png */,
+				9F98F756160AA82A0006314D /* signincheckboxSelected.png */,
+				9F98F757160AA82A0006314D /* Switch.png */,
+				9F98F758160AA82A0006314D /* textbg.png */,
+				9F98F759160AA82A0006314D /* title.png */,
+				9F98F75A160AA82A0006314D /* 关闭按钮.png */,
+				9F98F75B160AA82A0006314D /* 其他图标.png */,
+				9F98F75C160AA82A0006314D /* 列表上的按钮外框.png */,
+				9F98F75D160AA82A0006314D /* 列表背景.png */,
+				9F98F75E160AA82A0006314D /* 列表背景上的分割线.png */,
+				9F98F75F160AA82A0006314D /* 列表高亮条.png */,
+				9F98F760160AA82A0006314D /* 单选.png */,
+				9F98F761160AA82A0006314D /* 单选1.png */,
+				9F98F762160AA82A0006314D /* 单选框.png */,
+				9F98F763160AA82A0006314D /* 单选框点.png */,
+				9F98F764160AA82A0006314D /* 复选框.png */,
+				9F98F765160AA82A0006314D /* 复选框勾.png */,
+				9F98F766160AA82A0006314D /* 大弹出框.png */,
+				9F98F767160AA82A0006314D /* 大弹出框上的分割线.png */,
+				9F98F768160AA82A0006314D /* 按钮.png */,
+				9F98F769160AA82A0006314D /* 搜索png.png */,
+				9F98F76A160AA82A0006314D /* 标题按钮-press.png */,
+				9F98F76B160AA82A0006314D /* 标题按钮.png */,
+				9F98F76C160AA82A0006314D /* 样本管理图标.png */,
+				9F98F76D160AA82A0006314D /* 统计.png */,
+				9F98F76E160AA82A0006314D /* 编辑框 一行.png */,
+				9F98F76F160AA82A0006314D /* 编辑框 表格.png */,
+				9F98F770160AA82A0006314D /* 背景.png */,
+				9F98F771160AA82A0006314D /* 退出图标.png */,
+				9F98F772160AA82A0006314D /* 问卷执行图标.png */,
+				9F98F773160AA82A0006314D /* 项目管理图标.png */,
+=======
+				37783BF015E4E5AE0002419D /* back.png */,
+				37783BF115E4E5AE0002419D /* BG.png */,
+				37783BF215E4E5AE0002419D /* iconDownload.png */,
+				37783BF315E4E5AE0002419D /* iconinformation.png */,
+				37783BF415E4E5AE0002419D /* iconinterview.png */,
+				37783BF515E4E5AE0002419D /* iconQuestionnaire.png */,
+				37783BF615E4E5AE0002419D /* iconRecovery.png */,
+				37783BF715E4E5AE0002419D /* iconUpload.png */,
+				37783BF815E4E5AE0002419D /* Inputbox.png */,
+				37783BF915E4E5AE0002419D /* logo.png */,
+				37783BFA15E4E5AE0002419D /* menubg1.png */,
+				37783BFB15E4E5AE0002419D /* menubgarrowleft.png */,
+				37783BFC15E4E5AE0002419D /* menubgarrowright.png */,
+				37783BFD15E4E5AE0002419D /* popup.png */,
+				37783BFE15E4E5AE0002419D /* signincheckbox.png */,
+				FCB72C371609D7D000EA51DB /* 按钮.png */,
+				FCB72C381609D7D000EA51DB /* 背景.png */,
+				FCB72C391609D7D000EA51DB /* 编辑框 表格.png */,
+				FCB72C3A1609D7D000EA51DB /* 编辑框 一行.png */,
+				FCB72C3B1609D7D000EA51DB /* 标题按钮-press.png */,
+				FCB72C3C1609D7D000EA51DB /* 标题按钮.png */,
+				FCB72C3D1609D7D000EA51DB /* 大弹出框.png */,
+				FCB72C3E1609D7D000EA51DB /* 大弹出框上的分割线.png */,
+				FCB72C3F1609D7D000EA51DB /* 单选.png */,
+				FCB72C401609D7D000EA51DB /* 单选1.png */,
+				FCB72C411609D7D000EA51DB /* 单选框.png */,
+				FCB72C421609D7D000EA51DB /* 单选框点.png */,
+				FCB72C431609D7D000EA51DB /* 复选框.png */,
+				FCB72C441609D7D000EA51DB /* 复选框勾.png */,
+				FCB72C451609D7D000EA51DB /* 关闭按钮.png */,
+				FCB72C461609D7D000EA51DB /* 列表背景.png */,
+				FCB72C471609D7D000EA51DB /* 列表背景上的分割线.png */,
+				FCB72C481609D7D000EA51DB /* 列表高亮条.png */,
+				FCB72C491609D7D000EA51DB /* 列表上的按钮外框.png */,
+				FCB72C4A1609D7D000EA51DB /* 其他图标.png */,
+				FCB72C4B1609D7D000EA51DB /* 搜索png.png */,
+				FCB72C4C1609D7D000EA51DB /* 统计.png */,
+				FCB72C4D1609D7D000EA51DB /* 退出图标.png */,
+				FCB72C4E1609D7D000EA51DB /* 问卷执行图标.png */,
+				FCB72C4F1609D7D000EA51DB /* 项目管理图标.png */,
+				FCB72C501609D7D000EA51DB /* 样本管理图标.png */,
+				37783BFF15E4E5AE0002419D /* signincheckboxSelected.png */,
+				37783C0015E4E5AE0002419D /* Switch.png */,
+				37783C0115E4E5AE0002419D /* textbg.png */,
+				37783C0215E4E5AE0002419D /* title.png */,
+>>>>>>> .r255
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		9F98F774160AA82A0006314D /* 登录页面 */ = {
+			isa = PBXGroup;
+			children = (
+				9F98F775160AA82A0006314D /* 启动等待界面.png */,
+				9F98F776160AA82A0006314D /* 标志.png */,
+				9F98F777160AA82A0006314D /* 登录背景.png */,
+				9F98F778160AA82A0006314D /* 登录页面专用复选框.png */,
+				9F98F779160AA82A0006314D /* 登录页面专用复选框勾.png */,
+				9F98F77A160AA82A0006314D /* 登录页面复选框勾.png */,
+				9F98F77B160AA82A0006314D /* 登录页面复选框背景.png */,
+				9F98F77C160AA82A0006314D /* 登录页面底部菜单背景.png */,
+				9F98F77D160AA82A0006314D /* 登录页面编辑框.png */,
+				9F98F77E160AA82A0006314D /* 登陆页面LOGO.png */,
+				9F98F77F160AA82A0006314D /* 登陆页面按钮.png */,
+				9F98F780160AA82A0006314D /* 编辑框.png */,
+				9F98F781160AA82A0006314D /* 退出小图标.png */,
+			);
+			path = "登录页面";
+			sourceTree = "<group>";
+		};
+		9F98F782160AA82A0006314D /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+				9F9E8817160C18E3001D3E57 /* 其他二级菜单01.png */,
+				9F9E8818160C18E3001D3E57 /* 其他二级菜单02.png */,
+				9F9E8819160C18E3001D3E57 /* 项目管理二级菜单01.png */,
+				9F9E881A160C18E3001D3E57 /* 项目管理二级菜单02.png */,
+				9F98F783160AA82A0006314D /* 二级图标主题应用.png */,
+				9F98F784160AA82A0006314D /* 二级图标关于.png */,
+				9F98F785160AA82A0006314D /* 二级图标版本更新.png */,
+				9F98F786160AA82A0006314D /* 二级图标系统设置.png */,
+				9F98F787160AA82A0006314D /* 二级图标终端注册.png */,
+				9F98F788160AA82A0006314D /* 其他二级菜单.png */,
+			);
+			path = "其他";
+			sourceTree = "<group>";
+		};
+		9F98F789160AA82A0006314D /* 统计 */ = {
+			isa = PBXGroup;
+			children = (
+				9F98F78A160AA82A0006314D /* 搜索按钮.png */,
+				9F98F78B160AA82A0006314D /* 选择按钮1.png */,
+				9F98F78C160AA82A0006314D /* 选择按钮2.png */,
+			);
+			path = "统计";
+			sourceTree = "<group>";
+		};
+		9F98F78D160AA82A0006314D /* 问卷 */ = {
+			isa = PBXGroup;
+			children = (
+				9F98F78E160AA82A0006314D /* 上一题小图标.png */,
+				9F98F78F160AA82A0006314D /* 下一题小图标.png */,
+				9F98F790160AA82A0006314D /* 切换项目图标.png */,
+				9F98F791160AA82A0006314D /* 图钉.png */,
+				9F98F792160AA82A0006314D /* 影片占位图片.png */,
+				9F98F793160AA82A0006314D /* 拍照图标.png */,
+				9F98F794160AA82A0006314D /* 按钮线框.png */,
+				9F98F795160AA82A0006314D /* 照片占位.png */,
+				9F98F796160AA82A0006314D /* 照片占位图片.png */,
+				9F98F797160AA82A0006314D /* 照片图片占位.png */,
+				9F98F798160AA82A0006314D /* 照片按钮.png */,
+				9F98F799160AA82A0006314D /* 答题记录1.png */,
+				9F98F79A160AA82A0006314D /* 答题记录2.png */,
+				9F98F79B160AA82A0006314D /* 进程1.png */,
+				9F98F79C160AA82A0006314D /* 进程2.png */,
+				9F98F79D160AA82A0006314D /* 进程条.png */,
+				9F98F79E160AA82A0006314D /* 进程条背景.png */,
+				9F98F79F160AA82A0006314D /* 退出小图标.png */,
+			);
+			path = "问卷";
+			sourceTree = "<group>";
+		};
+		9F98F7A0160AA82A0006314D /* 项目 */ = {
+			isa = PBXGroup;
+			children = (
+				9F98F7A1160AA82A0006314D /* 上传答卷小图标.png */,
+				9F98F7A2160AA82A0006314D /* 二级图标上传答卷.png */,
+				9F98F7A3160AA82A0006314D /* 二级图标在线下载.png */,
+				9F98F7A4160AA82A0006314D /* 二级图标垃圾文件管理.png */,
+				9F98F7A5160AA82A0006314D /* 二级图标数据导出.png */,
+				9F98F7A6160AA82A0006314D /* 二级图标离线导入.png */,
+				9F98F7A7160AA82A0006314D /* 二级图标项目概况.png */,
+				9F98F7A8160AA82A0006314D /* 在线下载中小图标.png */,
+				9F98F7A9160AA82A0006314D /* 在线下载中进程1.png */,
+				9F98F7AA160AA82A0006314D /* 在线下载中进程2.png */,
+				9F98F7AB160AA82A0006314D /* 在线下载小图标.png */,
+				9F98F7AC160AA82A0006314D /* 按钮线框.png */,
+				9F98F7AD160AA82A0006314D /* 新问卷图标.png */,
+				9F98F7AE160AA82A0006314D /* 项目管理二级菜单.png */,
+			);
+			path = "项目";
+			sourceTree = "<group>";
+		};
+		9F98F7AF160AA82A0006314D /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				9F98F7B1160AA82A0006314D /* 标志.png */,
+				9F98F7B2160AA82A0006314D /* 登录页面专用复选框.png */,
+				9F98F7B3160AA82A0006314D /* 登录页面专用复选框勾.png */,
+				9F98F7B4160AA82A0006314D /* 编辑框.png */,
+			);
+			path = "登录";
+			sourceTree = "<group>";
+		};
+		9F98F7B5160AA82A0006314D /* 样本 */ = {
+			isa = PBXGroup;
+			children = (
+				9F98F7B6160AA82A0006314D /* TAB1.png */,
+				9F98F7B7160AA82A0006314D /* TAB2.png */,
+				9F98F7B8160AA82A0006314D /* TAB3.png */,
+				9F98F7B9160AA82A0006314D /* 列表上的按钮外框.png */,
+				9F98F7BA160AA82A0006314D /* 失败小图标.png */,
+				9F98F7BB160AA82A0006314D /* 失败顶部条.png */,
+				9F98F7BC160AA82A0006314D /* 开始访谈小图标.png */,
+				9F98F7BD160AA82A0006314D /* 成功小图标.png */,
+				9F98F7BE160AA82A0006314D /* 成功顶部条.png */,
+				9F98F7BF160AA82A0006314D /* 未接触小图标.png */,
+				9F98F7C0160AA82A0006314D /* 未接触顶部条.png */,
+				9F98F7C1160AA82A0006314D /* 查看答卷小图标.png */,
+				9F98F7C2160AA82A0006314D /* 样本信息小图标.png */,
+				9F98F7C3160AA82A0006314D /* 样本回收小图标.png */,
+			);
+			path = "样本";
+			sourceTree = "<group>";
+		};
+		9F98F7C4160AA82A0006314D /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				9F98F7C5160AA82A0006314D /* icon-确定.png */,
+				9F98F7C6160AA82A0006314D /* icon-确定press.png */,
+				9F98F7C7160AA82A0006314D /* NEW小图标.png */,
+				9F98F7C8160AA82A0006314D /* 一级菜单按钮.png */,
+				9F98F7C9160AA82A0006314D /* 一级菜单背景.png */,
+				9F98F7CA160AA82A0006314D /* 上传文件小图标.png */,
+				9F98F7CB160AA82A0006314D /* 上传进行中小图标.png */,
+				9F98F7CC160AA82A0006314D /* 下载进行中小图标.png */,
+				9F98F7CD160AA82A0006314D /* 二级菜单活动板的分割线.png */,
+				9F98F7CE160AA82A0006314D /* 二级菜单活动板的箭头右.png */,
+				9F98F7CF160AA82A0006314D /* 二级菜单活动板的箭头左.png */,
+				9F98F7D0160AA82A0006314D /* 二级菜单活动背景.png */,
+				9F98F7D1160AA82A0006314D /* 切换项目小图标.png */,
+				9F98F7D2160AA82A0006314D /* 单选框点.png */,
+				9F98F7D3160AA82A0006314D /* 单选框背景.png */,
+				9F98F7D4160AA82A0006314D /* 在线下载小图标.png */,
+				9F98F7D5160AA82A0006314D /* 复选框勾.png */,
+				9F98F7D6160AA82A0006314D /* 复选框背景.png */,
+				9F98F7D7160AA82A0006314D /* 小弹出框.png */,
+				9F98F7D8160AA82A0006314D /* 开始访问小图标.png */,
+				9F98F7D9160AA82A0006314D /* 弹出框.png */,
+				9F98F7DA160AA82A0006314D /* 未接触.png */,
+				9F98F7DB160AA82A0006314D /* 查看答卷小图标.png */,
+				9F98F7DC160AA82A0006314D /* 标签1.png */,
+				9F98F7DD160AA82A0006314D /* 标签2.png */,
+				9F98F7DE160AA82A0006314D /* 标签3.png */,
+				9F98F7DF160AA82A0006314D /* 标签4.png */,
+				9F98F7E0160AA82A0006314D /* 样本信息小图标.png */,
+				9F98F7E1160AA82A0006314D /* 样本回收小图标.png */,
+				9F98F7E2160AA82A0006314D /* 正文中的按钮.png */,
+				9F98F7E3160AA82A0006314D /* 正文背景.png */,
+				9F98F7E4160AA82A0006314D /* 正文背景左侧的装饰凹槽.png */,
+				9F98F7E5160AA82A0006314D /* 访问失败.png */,
+				9F98F7E6160AA82A0006314D /* 访问成功.png */,
+				9F98F7E7160AA82A0006314D /* 返回小图标.png */,
+				9F98F7E8160AA82A0006314D /* 退出小图标.png */,
+				9F98F7E9160AA82A0006314D /* 顶部条.png */,
+			);
+			path = "主页";
+			sourceTree = "<group>";
+		};
+		FC81D45A15F08A3D0051F035 /* ModuleViews */ = {
+			isa = PBXGroup;
+			children = (
+				FC81D45B15F08A3D0051F035 /* DeleteFilesView.h */,
+				FC8C197816080D8C0040BA9C /* UploadSampleSelectView.h */,
+				FC8C197916080D8C0040BA9C /* UploadSampleSelectView.m */,
+				FC8C197A16080D8D0040BA9C /* UploadSampleSelectView.xib */,
+				FC81D45C15F08A3D0051F035 /* DeleteFilesView.m */,
+				FC81D45D15F08A3D0051F035 /* DeleteFilesView.xib */,
+				FC81D45E15F08A3D0051F035 /* ExportView.h */,
+				FC81D45F15F08A3D0051F035 /* ExportView.m */,
+				FC81D46015F08A3D0051F035 /* ExportView.xib */,
+				FC81D46115F08A3D0051F035 /* ImportView.h */,
+				FC81D46215F08A3D0051F035 /* ImportView.m */,
+				FC81D46315F08A3D0051F035 /* ImportView.xib */,
+				FC81D46415F08A3D0051F035 /* ProjectInfoView.h */,
+				FC81D46515F08A3D0051F035 /* ProjectInfoView.m */,
+				FC81D46615F08A3D0051F035 /* ProjectInfoView.xib */,
+				FC81D46715F08A3D0051F035 /* ProjectSelectView.h */,
+				FC81D46815F08A3D0051F035 /* ProjectSelectView.m */,
+				FC81D46915F08A3D0051F035 /* ProjectSelectView.xib */,
+				FC81D46A15F08A3D0051F035 /* SampleInfoView.h */,
+				FC81D46B15F08A3D0051F035 /* SampleInfoView.m */,
+				FC81D46C15F08A3D0051F035 /* SampleInfoView.xib */,
+				FC81D46D15F08A3D0051F035 /* SampleSelectView.h */,
+				FC81D46E15F08A3D0051F035 /* SampleSelectView.m */,
+				FC81D46F15F08A3D0051F035 /* SampleSelectView.xib */,
+				FC81D47015F08A3D0051F035 /* SettingsView.h */,
+				FC81D47115F08A3D0051F035 /* SettingsView.m */,
+				FC81D47215F08A3D0051F035 /* SettingsView.xib */,
+				FC81D47315F08A3D0051F035 /* ThemeView.h */,
+				FC81D47415F08A3D0051F035 /* ThemeView.m */,
+				FC81D47515F08A3D0051F035 /* ThemeView.xib */,
+			);
+			path = ModuleViews;
+			sourceTree = "<group>";
+		};
+<<<<<<< .mine
+=======
+		FCB72C6C1609D7F700EA51DB /* 登录页面 */ = {
+			isa = PBXGroup;
+			children = (
+				FCB72C6D1609D7F700EA51DB /* 启动等待界面.png */,
+				FCB72C6E1609D7F700EA51DB /* 标志.png */,
+				FCB72C6F1609D7F700EA51DB /* 登录背景.png */,
+				FCB72C701609D7F700EA51DB /* 登录页面专用复选框.png */,
+				FCB72C711609D7F700EA51DB /* 登录页面专用复选框勾.png */,
+				FCB72C721609D7F700EA51DB /* 登录页面复选框勾.png */,
+				FCB72C731609D7F700EA51DB /* 登录页面复选框背景.png */,
+				FCB72C741609D7F700EA51DB /* 登录页面底部菜单背景.png */,
+				FCB72C751609D7F700EA51DB /* 登录页面编辑框.png */,
+				FCB72C761609D7F700EA51DB /* 登陆页面LOGO.png */,
+				FCB72C771609D7F700EA51DB /* 登陆页面按钮.png */,
+				FCB72C781609D7F700EA51DB /* 编辑框.png */,
+				FCB72C791609D7F700EA51DB /* 退出小图标.png */,
+			);
+			path = "登录页面";
+			sourceTree = "<group>";
+		};
+		FCB72C7A1609D7F700EA51DB /* 其他 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "其他";
+			sourceTree = "<group>";
+		};
+		FCB72C7B1609D7F700EA51DB /* 统计 */ = {
+			isa = PBXGroup;
+			children = (
+				FCB72C7C1609D7F700EA51DB /* 搜索按钮.png */,
+				FCB72C7D1609D7F700EA51DB /* 选择按钮1.png */,
+				FCB72C7E1609D7F700EA51DB /* 选择按钮2.png */,
+			);
+			path = "统计";
+			sourceTree = "<group>";
+		};
+		FCB72C7F1609D7F700EA51DB /* 问卷 */ = {
+			isa = PBXGroup;
+			children = (
+				FCB72C801609D7F700EA51DB /* 影片占位图片.png */,
+				FCB72C811609D7F700EA51DB /* 拍照图标.png */,
+				FCB72C821609D7F700EA51DB /* 照片占位图片.png */,
+				FCB72C831609D7F700EA51DB /* 进程条.png */,
+				FCB72C841609D7F700EA51DB /* 进程条背景.png */,
+			);
+			path = "问卷";
+			sourceTree = "<group>";
+		};
+		FCB72C851609D7F700EA51DB /* 项目 */ = {
+			isa = PBXGroup;
+			children = (
+				FCB72C861609D7F700EA51DB /* 上传答卷小图标.png */,
+				FCB72C871609D7F700EA51DB /* 在线下载小图标.png */,
+				FCB72C881609D7F700EA51DB /* 新问卷图标.png */,
+			);
+			path = "项目";
+			sourceTree = "<group>";
+		};
+		FCB72C891609D7F700EA51DB /* 样本 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "样本";
+			sourceTree = "<group>";
+		};
+		FCB72C8A1609D7F700EA51DB /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				FCB72C8B1609D7F700EA51DB /* icon-确定.png */,
+				FCB72C8C1609D7F700EA51DB /* icon-确定press.png */,
+				FCB72C8D1609D7F700EA51DB /* NEW小图标.png */,
+				FCB72C8E1609D7F700EA51DB /* 一级菜单按钮.png */,
+				FCB72C8F1609D7F700EA51DB /* 一级菜单背景.png */,
+				FCB72C901609D7F700EA51DB /* 上传文件小图标.png */,
+				FCB72C911609D7F700EA51DB /* 上传进行中小图标.png */,
+				FCB72C921609D7F700EA51DB /* 下载进行中小图标.png */,
+				FCB72C931609D7F700EA51DB /* 二级菜单活动板的分割线.png */,
+				FCB72C941609D7F700EA51DB /* 二级菜单活动板的箭头右.png */,
+				FCB72C951609D7F700EA51DB /* 二级菜单活动板的箭头左.png */,
+				FCB72C961609D7F700EA51DB /* 二级菜单活动背景.png */,
+				FCB72C971609D7F700EA51DB /* 切换项目小图标.png */,
+				FCB72C981609D7F700EA51DB /* 单选框点.png */,
+				FCB72C991609D7F700EA51DB /* 单选框背景.png */,
+				FCB72C9A1609D7F700EA51DB /* 在线下载小图标.png */,
+				FCB72C9B1609D7F700EA51DB /* 复选框勾.png */,
+				FCB72C9C1609D7F700EA51DB /* 复选框背景.png */,
+				FCB72C9D1609D7F700EA51DB /* 小弹出框.png */,
+				FCB72C9E1609D7F700EA51DB /* 开始访问小图标.png */,
+				FCB72C9F1609D7F700EA51DB /* 弹出框.png */,
+				FCB72CA01609D7F700EA51DB /* 未接触.png */,
+				FCB72CA11609D7F700EA51DB /* 查看答卷小图标.png */,
+				FCB72CA21609D7F700EA51DB /* 标签1.png */,
+				FCB72CA31609D7F700EA51DB /* 标签2.png */,
+				FCB72CA41609D7F700EA51DB /* 标签3.png */,
+				FCB72CA51609D7F700EA51DB /* 标签4.png */,
+				FCB72CA61609D7F700EA51DB /* 样本信息小图标.png */,
+				FCB72CA71609D7F700EA51DB /* 样本回收小图标.png */,
+				FCB72CA81609D7F700EA51DB /* 正文中的按钮.png */,
+				FCB72CA91609D7F700EA51DB /* 正文背景.png */,
+				FCB72CAA1609D7F700EA51DB /* 正文背景左侧的装饰凹槽.png */,
+				FCB72CAB1609D7F700EA51DB /* 访问失败.png */,
+				FCB72CAC1609D7F700EA51DB /* 访问成功.png */,
+				FCB72CAD1609D7F700EA51DB /* 返回小图标.png */,
+				FCB72CAE1609D7F700EA51DB /* 退出小图标.png */,
+				FCB72CAF1609D7F700EA51DB /* 顶部条.png */,
+			);
+			path = "主页";
+			sourceTree = "<group>";
+		};
+>>>>>>> .r255
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3787BD0F15B12D6B00C8F212 /* nankang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3787BD3415B12D6B00C8F212 /* Build configuration list for PBXNativeTarget "nankang" */;
+			buildPhases = (
+				3787BD0C15B12D6B00C8F212 /* Sources */,
+				3787BD0D15B12D6B00C8F212 /* Frameworks */,
+				3787BD0E15B12D6B00C8F212 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nankang;
+			productName = nankang;
+			productReference = 3787BD1015B12D6B00C8F212 /* nankang.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3787BD0715B12D6B00C8F212 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 3787BD0A15B12D6B00C8F212 /* Build configuration list for PBXProject "nankang" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3787BD0515B12D6B00C8F212;
+			productRefGroup = 3787BD1115B12D6B00C8F212 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3787BD0F15B12D6B00C8F212 /* nankang */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3787BD0E15B12D6B00C8F212 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3787BD1F15B12D6B00C8F212 /* InfoPlist.strings in Resources */,
+				37B55E7A15D62BE3004D4DE9 /* LoginViewController.xib in Resources */,
+				37B55E7F15D62BF9004D4DE9 /* RootViewController.xib in Resources */,
+				37B55EAB15D64985004D4DE9 /* ICON in Resources */,
+				37B55EAE15D64985004D4DE9 /* provinces.xml in Resources */,
+				37B55EAF15D64985004D4DE9 /* sur.sur in Resources */,
+				37B55EB015D64985004D4DE9 /* test.html in Resources */,
+				37B55EB115D64985004D4DE9 /* test1.html in Resources */,
+				37B55EC715D64985004D4DE9 /* 民生问卷.sur in Resources */,
+				37B55EC915D64BC6004D4DE9 /* ProjectCell.xib in Resources */,
+				FC81D44B15F089DA0051F035 /* ProjectListView.xib in Resources */,
+				FC81D45015F089EA0051F035 /* SampleListView.xib in Resources */,
+				FC81D45515F089F50051F035 /* SurveyExcuteView.xib in Resources */,
+				FC81D45715F08A060051F035 /* SampleCell.xib in Resources */,
+				FC81D45915F08A240051F035 /* nankang-Info.plist in Resources */,
+				FC81D47715F08A3D0051F035 /* DeleteFilesView.xib in Resources */,
+				FC81D47915F08A3D0051F035 /* ExportView.xib in Resources */,
+				FC81D47B15F08A3D0051F035 /* ImportView.xib in Resources */,
+				FC81D47D15F08A3D0051F035 /* ProjectInfoView.xib in Resources */,
+				FC81D47F15F08A3D0051F035 /* ProjectSelectView.xib in Resources */,
+				FC81D48115F08A3D0051F035 /* SampleInfoView.xib in Resources */,
+				FC81D48315F08A3D0051F035 /* SampleSelectView.xib in Resources */,
+				FC81D48515F08A3D0051F035 /* SettingsView.xib in Resources */,
+				FC81D48715F08A3D0051F035 /* ThemeView.xib in Resources */,
+				FC992E4E15F4A0CB00E48D12 /* StatisticView.xib in Resources */,
+				FC8C197C16080D8D0040BA9C /* UploadSampleSelectView.xib in Resources */,
+<<<<<<< .mine
+				9F98F7EA160AA82A0006314D /* back.png in Resources */,
+				9F98F7EB160AA82A0006314D /* BG.png in Resources */,
+				9F98F7EC160AA82A0006314D /* iconDownload.png in Resources */,
+				9F98F7ED160AA82A0006314D /* iconinformation.png in Resources */,
+				9F98F7EE160AA82A0006314D /* iconinterview.png in Resources */,
+				9F98F7EF160AA82A0006314D /* iconQuestionnaire.png in Resources */,
+				9F98F7F0160AA82A0006314D /* iconRecovery.png in Resources */,
+				9F98F7F1160AA82A0006314D /* iconUpload.png in Resources */,
+				9F98F7F2160AA82A0006314D /* Inputbox.png in Resources */,
+				9F98F7F3160AA82A0006314D /* logo.png in Resources */,
+				9F98F7F4160AA82A0006314D /* menubg1.png in Resources */,
+				9F98F7F5160AA82A0006314D /* menubgarrowleft.png in Resources */,
+				9F98F7F6160AA82A0006314D /* menubgarrowright.png in Resources */,
+				9F98F7F7160AA82A0006314D /* popup.png in Resources */,
+				9F98F7F8160AA82A0006314D /* signincheckbox.png in Resources */,
+				9F98F7F9160AA82A0006314D /* signincheckboxSelected.png in Resources */,
+				9F98F7FA160AA82A0006314D /* Switch.png in Resources */,
+				9F98F7FB160AA82A0006314D /* textbg.png in Resources */,
+				9F98F7FC160AA82A0006314D /* title.png in Resources */,
+				9F98F7FD160AA82A0006314D /* 关闭按钮.png in Resources */,
+				9F98F7FE160AA82A0006314D /* 其他图标.png in Resources */,
+				9F98F7FF160AA82A0006314D /* 列表上的按钮外框.png in Resources */,
+				9F98F800160AA82A0006314D /* 列表背景.png in Resources */,
+				9F98F801160AA82A0006314D /* 列表背景上的分割线.png in Resources */,
+				9F98F802160AA82A0006314D /* 列表高亮条.png in Resources */,
+				9F98F803160AA82A0006314D /* 单选.png in Resources */,
+				9F98F804160AA82A0006314D /* 单选1.png in Resources */,
+				9F98F805160AA82A0006314D /* 单选框.png in Resources */,
+				9F98F806160AA82A0006314D /* 单选框点.png in Resources */,
+				9F98F807160AA82A0006314D /* 复选框.png in Resources */,
+				9F98F808160AA82A0006314D /* 复选框勾.png in Resources */,
+				9F98F809160AA82A0006314D /* 大弹出框.png in Resources */,
+				9F98F80A160AA82A0006314D /* 大弹出框上的分割线.png in Resources */,
+				9F98F80B160AA82A0006314D /* 按钮.png in Resources */,
+				9F98F80C160AA82A0006314D /* 搜索png.png in Resources */,
+				9F98F80D160AA82A0006314D /* 标题按钮-press.png in Resources */,
+				9F98F80E160AA82A0006314D /* 标题按钮.png in Resources */,
+				9F98F80F160AA82A0006314D /* 样本管理图标.png in Resources */,
+				9F98F810160AA82A0006314D /* 统计.png in Resources */,
+				9F98F811160AA82A0006314D /* 编辑框 一行.png in Resources */,
+				9F98F812160AA82A0006314D /* 编辑框 表格.png in Resources */,
+				9F98F813160AA82A0006314D /* 背景.png in Resources */,
+				9F98F814160AA82A0006314D /* 退出图标.png in Resources */,
+				9F98F815160AA82A0006314D /* 问卷执行图标.png in Resources */,
+				9F98F816160AA82A0006314D /* 项目管理图标.png in Resources */,
+				9F98F817160AA82A0006314D /* 启动等待界面.png in Resources */,
+				9F98F818160AA82A0006314D /* 标志.png in Resources */,
+				9F98F819160AA82A0006314D /* 登录背景.png in Resources */,
+				9F98F81A160AA82A0006314D /* 登录页面专用复选框.png in Resources */,
+				9F98F81B160AA82A0006314D /* 登录页面专用复选框勾.png in Resources */,
+				9F98F81C160AA82A0006314D /* 登录页面复选框勾.png in Resources */,
+				9F98F81D160AA82A0006314D /* 登录页面复选框背景.png in Resources */,
+				9F98F81E160AA82A0006314D /* 登录页面底部菜单背景.png in Resources */,
+				9F98F81F160AA82A0006314D /* 登录页面编辑框.png in Resources */,
+				9F98F820160AA82A0006314D /* 登陆页面LOGO.png in Resources */,
+				9F98F821160AA82A0006314D /* 登陆页面按钮.png in Resources */,
+				9F98F822160AA82A0006314D /* 编辑框.png in Resources */,
+				9F98F823160AA82A0006314D /* 退出小图标.png in Resources */,
+				9F98F824160AA82A0006314D /* 二级图标主题应用.png in Resources */,
+				9F98F825160AA82A0006314D /* 二级图标关于.png in Resources */,
+				9F98F826160AA82A0006314D /* 二级图标版本更新.png in Resources */,
+				9F98F827160AA82A0006314D /* 二级图标系统设置.png in Resources */,
+				9F98F828160AA82A0006314D /* 二级图标终端注册.png in Resources */,
+				9F98F829160AA82A0006314D /* 其他二级菜单.png in Resources */,
+				9F98F82A160AA82A0006314D /* 搜索按钮.png in Resources */,
+				9F98F82B160AA82A0006314D /* 选择按钮1.png in Resources */,
+				9F98F82C160AA82A0006314D /* 选择按钮2.png in Resources */,
+				9F98F82D160AA82A0006314D /* 上一题小图标.png in Resources */,
+				9F98F82E160AA82A0006314D /* 下一题小图标.png in Resources */,
+				9F98F82F160AA82A0006314D /* 切换项目图标.png in Resources */,
+				9F98F830160AA82A0006314D /* 图钉.png in Resources */,
+				9F98F831160AA82A0006314D /* 影片占位图片.png in Resources */,
+				9F98F832160AA82A0006314D /* 拍照图标.png in Resources */,
+				9F98F833160AA82A0006314D /* 按钮线框.png in Resources */,
+				9F98F834160AA82A0006314D /* 照片占位.png in Resources */,
+				9F98F835160AA82A0006314D /* 照片占位图片.png in Resources */,
+				9F98F836160AA82A0006314D /* 照片图片占位.png in Resources */,
+				9F98F837160AA82A0006314D /* 照片按钮.png in Resources */,
+				9F98F838160AA82A0006314D /* 答题记录1.png in Resources */,
+				9F98F839160AA82A0006314D /* 答题记录2.png in Resources */,
+				9F98F83A160AA82A0006314D /* 进程1.png in Resources */,
+				9F98F83B160AA82A0006314D /* 进程2.png in Resources */,
+				9F98F83C160AA82A0006314D /* 进程条.png in Resources */,
+				9F98F83D160AA82A0006314D /* 进程条背景.png in Resources */,
+				9F98F83E160AA82A0006314D /* 退出小图标.png in Resources */,
+				9F98F83F160AA82A0006314D /* 上传答卷小图标.png in Resources */,
+				9F98F840160AA82A0006314D /* 二级图标上传答卷.png in Resources */,
+				9F98F841160AA82A0006314D /* 二级图标在线下载.png in Resources */,
+				9F98F842160AA82A0006314D /* 二级图标垃圾文件管理.png in Resources */,
+				9F98F843160AA82A0006314D /* 二级图标数据导出.png in Resources */,
+				9F98F844160AA82A0006314D /* 二级图标离线导入.png in Resources */,
+				9F98F845160AA82A0006314D /* 二级图标项目概况.png in Resources */,
+				9F98F846160AA82A0006314D /* 在线下载中小图标.png in Resources */,
+				9F98F847160AA82A0006314D /* 在线下载中进程1.png in Resources */,
+				9F98F848160AA82A0006314D /* 在线下载中进程2.png in Resources */,
+				9F98F849160AA82A0006314D /* 在线下载小图标.png in Resources */,
+				9F98F84A160AA82A0006314D /* 按钮线框.png in Resources */,
+				9F98F84B160AA82A0006314D /* 新问卷图标.png in Resources */,
+				9F98F84C160AA82A0006314D /* 项目管理二级菜单.png in Resources */,
+				9F98F84E160AA82A0006314D /* 标志.png in Resources */,
+				9F98F84F160AA82A0006314D /* 登录页面专用复选框.png in Resources */,
+				9F98F850160AA82A0006314D /* 登录页面专用复选框勾.png in Resources */,
+				9F98F851160AA82A0006314D /* 编辑框.png in Resources */,
+				9F98F852160AA82A0006314D /* TAB1.png in Resources */,
+				9F98F853160AA82A0006314D /* TAB2.png in Resources */,
+				9F98F854160AA82A0006314D /* TAB3.png in Resources */,
+				9F98F855160AA82A0006314D /* 列表上的按钮外框.png in Resources */,
+				9F98F856160AA82A0006314D /* 失败小图标.png in Resources */,
+				9F98F857160AA82A0006314D /* 失败顶部条.png in Resources */,
+				9F98F858160AA82A0006314D /* 开始访谈小图标.png in Resources */,
+				9F98F859160AA82A0006314D /* 成功小图标.png in Resources */,
+				9F98F85A160AA82A0006314D /* 成功顶部条.png in Resources */,
+				9F98F85B160AA82A0006314D /* 未接触小图标.png in Resources */,
+				9F98F85C160AA82A0006314D /* 未接触顶部条.png in Resources */,
+				9F98F85D160AA82A0006314D /* 查看答卷小图标.png in Resources */,
+				9F98F85E160AA82A0006314D /* 样本信息小图标.png in Resources */,
+				9F98F85F160AA82A0006314D /* 样本回收小图标.png in Resources */,
+				9F98F860160AA82A0006314D /* icon-确定.png in Resources */,
+				9F98F861160AA82A0006314D /* icon-确定press.png in Resources */,
+				9F98F862160AA82A0006314D /* NEW小图标.png in Resources */,
+				9F98F863160AA82A0006314D /* 一级菜单按钮.png in Resources */,
+				9F98F864160AA82A0006314D /* 一级菜单背景.png in Resources */,
+				9F98F865160AA82A0006314D /* 上传文件小图标.png in Resources */,
+				9F98F866160AA82A0006314D /* 上传进行中小图标.png in Resources */,
+				9F98F867160AA82A0006314D /* 下载进行中小图标.png in Resources */,
+				9F98F868160AA82A0006314D /* 二级菜单活动板的分割线.png in Resources */,
+				9F98F869160AA82A0006314D /* 二级菜单活动板的箭头右.png in Resources */,
+				9F98F86A160AA82A0006314D /* 二级菜单活动板的箭头左.png in Resources */,
+				9F98F86B160AA82A0006314D /* 二级菜单活动背景.png in Resources */,
+				9F98F86C160AA82A0006314D /* 切换项目小图标.png in Resources */,
+				9F98F86D160AA82A0006314D /* 单选框点.png in Resources */,
+				9F98F86E160AA82A0006314D /* 单选框背景.png in Resources */,
+				9F98F86F160AA82A0006314D /* 在线下载小图标.png in Resources */,
+				9F98F870160AA82A0006314D /* 复选框勾.png in Resources */,
+				9F98F871160AA82A0006314D /* 复选框背景.png in Resources */,
+				9F98F872160AA82A0006314D /* 小弹出框.png in Resources */,
+				9F98F873160AA82A0006314D /* 开始访问小图标.png in Resources */,
+				9F98F874160AA82A0006314D /* 弹出框.png in Resources */,
+				9F98F875160AA82A0006314D /* 未接触.png in Resources */,
+				9F98F876160AA82A0006314D /* 查看答卷小图标.png in Resources */,
+				9F98F877160AA82A0006314D /* 标签1.png in Resources */,
+				9F98F878160AA82A0006314D /* 标签2.png in Resources */,
+				9F98F879160AA82A0006314D /* 标签3.png in Resources */,
+				9F98F87A160AA82A0006314D /* 标签4.png in Resources */,
+				9F98F87B160AA82A0006314D /* 样本信息小图标.png in Resources */,
+				9F98F87C160AA82A0006314D /* 样本回收小图标.png in Resources */,
+				9F98F87D160AA82A0006314D /* 正文中的按钮.png in Resources */,
+				9F98F87E160AA82A0006314D /* 正文背景.png in Resources */,
+				9F98F87F160AA82A0006314D /* 正文背景左侧的装饰凹槽.png in Resources */,
+				9F98F880160AA82A0006314D /* 访问失败.png in Resources */,
+				9F98F881160AA82A0006314D /* 访问成功.png in Resources */,
+				9F98F882160AA82A0006314D /* 返回小图标.png in Resources */,
+				9F98F883160AA82A0006314D /* 退出小图标.png in Resources */,
+				9F98F884160AA82A0006314D /* 顶部条.png in Resources */,
+				9F98F89E160AA8420006314D /* 按钮.png in Resources */,
+				9F98F89F160AA8420006314D /* 按钮线框.png in Resources */,
+				9F98F8A0160AA8420006314D /* 背景.png in Resources */,
+				9F98F8A1160AA8420006314D /* 编辑框 表格.png in Resources */,
+				9F98F8A2160AA8420006314D /* 编辑框 一行.png in Resources */,
+				9F98F8A3160AA8420006314D /* 大弹出框.png in Resources */,
+				9F98F8A4160AA8420006314D /* 大弹出框上的分割线.png in Resources */,
+				9F98F8A5160AA8420006314D /* 单选框.png in Resources */,
+				9F98F8A6160AA8420006314D /* 单选框点.png in Resources */,
+				9F98F8A7160AA8420006314D /* 二级菜单聚焦.png in Resources */,
+				9F98F8A8160AA8420006314D /* 复选框.png in Resources */,
+				9F98F8A9160AA8420006314D /* 复选框勾.png in Resources */,
+				9F98F8AA160AA8420006314D /* 关闭按钮.png in Resources */,
+				9F98F8AB160AA8420006314D /* 列表背景.png in Resources */,
+				9F98F8AC160AA8420006314D /* 列表背景上的分割线.png in Resources */,
+				9F98F8AD160AA8420006314D /* 列表高亮条.png in Resources */,
+				9F98F8AE160AA8420006314D /* 其他图标.png in Resources */,
+				9F98F8AF160AA8420006314D /* 切换项目图标.png in Resources */,
+				9F98F8B0160AA8420006314D /* 统计.png in Resources */,
+				9F98F8B1160AA8420006314D /* 退出图标.png in Resources */,
+				9F98F8B2160AA8420006314D /* 问卷执行图标.png in Resources */,
+				9F98F8B3160AA8420006314D /* 项目管理图标.png in Resources */,
+				9F98F8B4160AA8420006314D /* 小弹出框.png in Resources */,
+				9F98F8B5160AA8420006314D /* 样本管理图标.png in Resources */,
+				9F98F8B6160AA8420006314D /* Default.png in Resources */,
+				9F9E881B160C18E3001D3E57 /* 其他二级菜单01.png in Resources */,
+				9F9E881C160C18E3001D3E57 /* 其他二级菜单02.png in Resources */,
+				9F9E881D160C18E3001D3E57 /* 项目管理二级菜单01.png in Resources */,
+				9F9E881E160C18E3001D3E57 /* 项目管理二级菜单02.png in Resources */,
+=======
+				FCB72C511609D7D000EA51DB /* 按钮.png in Resources */,
+				FCB72C521609D7D000EA51DB /* 背景.png in Resources */,
+				FCB72C531609D7D000EA51DB /* 编辑框 表格.png in Resources */,
+				FCB72C541609D7D000EA51DB /* 编辑框 一行.png in Resources */,
+				FCB72C551609D7D000EA51DB /* 标题按钮-press.png in Resources */,
+				FCB72C561609D7D000EA51DB /* 标题按钮.png in Resources */,
+				FCB72C571609D7D000EA51DB /* 大弹出框.png in Resources */,
+				FCB72C581609D7D000EA51DB /* 大弹出框上的分割线.png in Resources */,
+				FCB72C591609D7D000EA51DB /* 单选.png in Resources */,
+				FCB72C5A1609D7D000EA51DB /* 单选1.png in Resources */,
+				FCB72C5B1609D7D000EA51DB /* 单选框.png in Resources */,
+				FCB72C5C1609D7D000EA51DB /* 单选框点.png in Resources */,
+				FCB72C5D1609D7D000EA51DB /* 复选框.png in Resources */,
+				FCB72C5E1609D7D000EA51DB /* 复选框勾.png in Resources */,
+				FCB72C5F1609D7D000EA51DB /* 关闭按钮.png in Resources */,
+				FCB72C601609D7D000EA51DB /* 列表背景.png in Resources */,
+				FCB72C611609D7D000EA51DB /* 列表背景上的分割线.png in Resources */,
+				FCB72C621609D7D000EA51DB /* 列表高亮条.png in Resources */,
+				FCB72C631609D7D000EA51DB /* 列表上的按钮外框.png in Resources */,
+				FCB72C641609D7D000EA51DB /* 其他图标.png in Resources */,
+				FCB72C651609D7D000EA51DB /* 搜索png.png in Resources */,
+				FCB72C661609D7D000EA51DB /* 统计.png in Resources */,
+				FCB72C671609D7D000EA51DB /* 退出图标.png in Resources */,
+				FCB72C681609D7D000EA51DB /* 问卷执行图标.png in Resources */,
+				FCB72C691609D7D000EA51DB /* 项目管理图标.png in Resources */,
+				FCB72C6A1609D7D000EA51DB /* 样本管理图标.png in Resources */,
+				FCB72CB01609D7F700EA51DB /* 启动等待界面.png in Resources */,
+				FCB72CB11609D7F700EA51DB /* 标志.png in Resources */,
+				FCB72CB21609D7F700EA51DB /* 登录背景.png in Resources */,
+				FCB72CB31609D7F700EA51DB /* 登录页面专用复选框.png in Resources */,
+				FCB72CB41609D7F700EA51DB /* 登录页面专用复选框勾.png in Resources */,
+				FCB72CB51609D7F700EA51DB /* 登录页面复选框勾.png in Resources */,
+				FCB72CB61609D7F700EA51DB /* 登录页面复选框背景.png in Resources */,
+				FCB72CB71609D7F700EA51DB /* 登录页面底部菜单背景.png in Resources */,
+				FCB72CB81609D7F700EA51DB /* 登录页面编辑框.png in Resources */,
+				FCB72CB91609D7F700EA51DB /* 登陆页面LOGO.png in Resources */,
+				FCB72CBA1609D7F700EA51DB /* 登陆页面按钮.png in Resources */,
+				FCB72CBB1609D7F700EA51DB /* 编辑框.png in Resources */,
+				FCB72CBC1609D7F700EA51DB /* 退出小图标.png in Resources */,
+				FCB72CBD1609D7F700EA51DB /* 搜索按钮.png in Resources */,
+				FCB72CBE1609D7F700EA51DB /* 选择按钮1.png in Resources */,
+				FCB72CBF1609D7F700EA51DB /* 选择按钮2.png in Resources */,
+				FCB72CC01609D7F700EA51DB /* 影片占位图片.png in Resources */,
+				FCB72CC11609D7F700EA51DB /* 拍照图标.png in Resources */,
+				FCB72CC21609D7F700EA51DB /* 照片占位图片.png in Resources */,
+				FCB72CC31609D7F700EA51DB /* 进程条.png in Resources */,
+				FCB72CC41609D7F700EA51DB /* 进程条背景.png in Resources */,
+				FCB72CC51609D7F700EA51DB /* 上传答卷小图标.png in Resources */,
+				FCB72CC61609D7F700EA51DB /* 在线下载小图标.png in Resources */,
+				FCB72CC71609D7F700EA51DB /* 新问卷图标.png in Resources */,
+				FCB72CC81609D7F700EA51DB /* icon-确定.png in Resources */,
+				FCB72CC91609D7F700EA51DB /* icon-确定press.png in Resources */,
+				FCB72CCA1609D7F700EA51DB /* NEW小图标.png in Resources */,
+				FCB72CCB1609D7F700EA51DB /* 一级菜单按钮.png in Resources */,
+				FCB72CCC1609D7F700EA51DB /* 一级菜单背景.png in Resources */,
+				FCB72CCD1609D7F700EA51DB /* 上传文件小图标.png in Resources */,
+				FCB72CCE1609D7F700EA51DB /* 上传进行中小图标.png in Resources */,
+				FCB72CCF1609D7F700EA51DB /* 下载进行中小图标.png in Resources */,
+				FCB72CD01609D7F700EA51DB /* 二级菜单活动板的分割线.png in Resources */,
+				FCB72CD11609D7F700EA51DB /* 二级菜单活动板的箭头右.png in Resources */,
+				FCB72CD21609D7F700EA51DB /* 二级菜单活动板的箭头左.png in Resources */,
+				FCB72CD31609D7F700EA51DB /* 二级菜单活动背景.png in Resources */,
+				FCB72CD41609D7F700EA51DB /* 切换项目小图标.png in Resources */,
+				FCB72CD51609D7F700EA51DB /* 单选框点.png in Resources */,
+				FCB72CD61609D7F700EA51DB /* 单选框背景.png in Resources */,
+				FCB72CD71609D7F700EA51DB /* 在线下载小图标.png in Resources */,
+				FCB72CD81609D7F700EA51DB /* 复选框勾.png in Resources */,
+				FCB72CD91609D7F700EA51DB /* 复选框背景.png in Resources */,
+				FCB72CDA1609D7F700EA51DB /* 小弹出框.png in Resources */,
+				FCB72CDB1609D7F700EA51DB /* 开始访问小图标.png in Resources */,
+				FCB72CDC1609D7F700EA51DB /* 弹出框.png in Resources */,
+				FCB72CDD1609D7F700EA51DB /* 未接触.png in Resources */,
+				FCB72CDE1609D7F700EA51DB /* 查看答卷小图标.png in Resources */,
+				FCB72CDF1609D7F700EA51DB /* 标签1.png in Resources */,
+				FCB72CE01609D7F700EA51DB /* 标签2.png in Resources */,
+				FCB72CE11609D7F700EA51DB /* 标签3.png in Resources */,
+				FCB72CE21609D7F700EA51DB /* 标签4.png in Resources */,
+				FCB72CE31609D7F700EA51DB /* 样本信息小图标.png in Resources */,
+				FCB72CE41609D7F700EA51DB /* 样本回收小图标.png in Resources */,
+				FCB72CE51609D7F700EA51DB /* 正文中的按钮.png in Resources */,
+				FCB72CE61609D7F700EA51DB /* 正文背景.png in Resources */,
+				FCB72CE71609D7F700EA51DB /* 正文背景左侧的装饰凹槽.png in Resources */,
+				FCB72CE81609D7F700EA51DB /* 访问失败.png in Resources */,
+				FCB72CE91609D7F700EA51DB /* 访问成功.png in Resources */,
+				FCB72CEA1609D7F700EA51DB /* 返回小图标.png in Resources */,
+				FCB72CEB1609D7F700EA51DB /* 退出小图标.png in Resources */,
+				FCB72CEC1609D7F700EA51DB /* 顶部条.png in Resources */,
+>>>>>>> .r255
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3787BD0C15B12D6B00C8F212 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3787BD2115B12D6B00C8F212 /* main.m in Sources */,
+				3787BD2515B12D6B00C8F212 /* AppDelegate.m in Sources */,
+				37B55E7915D62BE3004D4DE9 /* LoginViewController.m in Sources */,
+				37B55E7E15D62BF9004D4DE9 /* RootViewController.m in Sources */,
+				373C02B515DE34BA00979543 /* MChoiceQuestionView.m in Sources */,
+				373C02B615DE34BA00979543 /* QuestBaseViewController.m in Sources */,
+				373C02B715DE34BA00979543 /* QuestionBase.m in Sources */,
+				373C02B815DE34BA00979543 /* SBlankQuestionView.m in Sources */,
+				373C02B915DE34BA00979543 /* SChoiceQuestionView.m in Sources */,
+				373C02BA15DE34BA00979543 /* SFormQuestionView.m in Sources */,
+				373C02BB15DE34BA00979543 /* SurveyManager.m in Sources */,
+				FC81D44A15F089DA0051F035 /* ProjectListView.m in Sources */,
+				FC81D44F15F089EA0051F035 /* SampleListView.m in Sources */,
+				FC81D45415F089F50051F035 /* SurveyExcuteView.m in Sources */,
+				FC81D47615F08A3D0051F035 /* DeleteFilesView.m in Sources */,
+				FC81D47815F08A3D0051F035 /* ExportView.m in Sources */,
+				FC81D47A15F08A3D0051F035 /* ImportView.m in Sources */,
+				FC81D47C15F08A3D0051F035 /* ProjectInfoView.m in Sources */,
+				FC81D47E15F08A3D0051F035 /* ProjectSelectView.m in Sources */,
+				FC81D48015F08A3D0051F035 /* SampleInfoView.m in Sources */,
+				FC81D48215F08A3D0051F035 /* SampleSelectView.m in Sources */,
+				FC81D48415F08A3D0051F035 /* SettingsView.m in Sources */,
+				FC81D48615F08A3D0051F035 /* ThemeView.m in Sources */,
+				FC992E4D15F4A0CB00E48D12 /* StatisticView.m in Sources */,
+				FC8F999215F8B2DB003A1208 /* BFormQuestionView.m in Sources */,
+				FC8F999315F8B2DB003A1208 /* MBlankQuestionView.m in Sources */,
+				FC8F999415F8B2DB003A1208 /* MChoiceOrderQuestionView.m in Sources */,
+				FC8F999515F8B2DB003A1208 /* MFormQuestionView.m in Sources */,
+				FC8C197B16080D8D0040BA9C /* UploadSampleSelectView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3787BD1D15B12D6B00C8F212 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3787BD1E15B12D6B00C8F212 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3787BD3215B12D6B00C8F212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3787BD3315B12D6B00C8F212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3787BD3515B12D6B00C8F212 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nankang/nankang-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "nankang/nankang-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UnitrueFramework\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = unitrueframeworkheader;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3787BD3615B12D6B00C8F212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "nankang/nankang-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "nankang/nankang-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/UnitrueFramework\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = unitrueframeworkheader;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3787BD0A15B12D6B00C8F212 /* Build configuration list for PBXProject "nankang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3787BD3215B12D6B00C8F212 /* Debug */,
+				3787BD3315B12D6B00C8F212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3787BD3415B12D6B00C8F212 /* Build configuration list for PBXNativeTarget "nankang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3787BD3515B12D6B00C8F212 /* Debug */,
+				3787BD3615B12D6B00C8F212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3787BD0715B12D6B00C8F212 /* Project object */;
+}

@@ -1,0 +1,9 @@
+K 13
+svn:externals
+V 362
+https://unitrue.com.cn/svn/nankang/branches/UnitrueFramework/UnitrueFramework/Resources Resources
+https://unitrue.com.cn/svn/nankang/branches/nankang/nankang nankang
+https://unitrue.com.cn/svn/nankang/branches/unitrueframeworkheader unitrueframeworkheader
+https://unitrue.com.cn/svn/nankang/branches/UnitrueFramework/build/Debug-iphonesimulator UnitrueFramework
+
+END

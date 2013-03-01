@@ -1,0 +1,646 @@
+//
+//  RootViewController.m
+//  nankang
+//
+//  Created by xudong jin on 12-8-11.
+//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//
+
+#import "RootViewController.h"
+#import "Project.h"
+#import "BILayerClient.h"
+#import "User.h"
+#import "AppDelegate.h"
+#import "ResultObject.h"
+#import "DownLoadResumeFileWrapper.h"
+#import "CAPIResumeFile.h"
+#import "VOEnums.h"
+#import "PathHelper.h"
+#import "CJSONDeserializer.h"
+#import "User.h"
+#import "SuveyAnswer.h"
+#import "CJSONSerializer.h"
+#import "NKSampleStatus.h"
+@interface RootViewController ()
+
+@end
+
+@implementation RootViewController
+#pragma mark - View lifecycle
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+<<<<<<< .mine
+        mSurveyManager=[[SurveyManager alloc]init];
+        mCurrentSelected=-1;
+        type=-1;
+        btnstate=1;
+        btnstateOther=1;
+=======
+        mSurveyManager=[[SurveyManager alloc]init];
+        mCurrentSelected=-1;
+        type=-1;
+        btnstate=1;
+        btnstateOther=1;
+        mSampleListWithStatus= [[NSMutableDictionary alloc]init];
+>>>>>>> .r103
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    selectTableView.delegate=self;
+    selectTableView.dataSource=self;
+    
+    // Do any additional setup after loading the view from its nib.
+    self.title=@"面访专家";
+    
+    
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return YES;
+}
+-(void)getProjects
+{
+    BILayerClient*advClient = [[BILayerClient alloc] initWithTarget:self 
+                                                             action:@selector(getProjectListDidReceive:obj:)];
+    User*currentuser= [[AppDelegate getAppDelegate]getCurrentUser];
+    if (currentuser==nil) {//尚未登录
+        return;
+    }
+    [advClient getProjectList:currentuser.username companyCode:currentuser.companyCode deviceCode:@"123456789"];
+    
+}
+- (void)getProjectListDidReceive:(BILayerClient*)sender obj:(NSObject*)obj
+{
+    //DownLoadResumeFileWrapper*result=[[DownLoadResumeFileWrapper alloc]initWithJsonDictionary:obj];
+    
+    ResultObject *result=[[ResultObject alloc]initWithJsonDictionary:obj];
+    if (mProjects==nil) {
+        mProjects=[[NSMutableArray alloc]init];
+    }
+    
+    if (result.result==1) {
+        if (mProjects.count>0) {
+            [mProjects removeAllObjects];
+        }
+        for (NSDictionary*dic in result.content) {
+            [mProjects addObject:[[Project alloc]initWithJsonDictionary:dic]];
+        }
+        
+        
+    }
+    else {
+        [[AppDelegate getAppDelegate]alert:@"获取项目数据失败" message:@""];
+        
+    }
+    User*currentuser= [[AppDelegate getAppDelegate]getCurrentUser];
+    currentuser.projects=[mProjects retain];
+    [mTableView reloadData];
+    
+    
+}
+
+
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    User*currentUser=[[AppDelegate getAppDelegate] getCurrentUser];
+    if (currentUser!=nil) {
+        mProjects=currentUser.projects;
+        if (mProjects==nil||mProjects.count==0) {
+            [self getProjects];
+        }
+        else {
+            [mTableView reloadData];
+        }
+    }
+    
+    
+}
+#pragma mark-
+#pragma  mark TableView delegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // Return the number of rows in the section.
+    return mProjects.count;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+<<<<<<< .mine
+    if (type==1) {
+        return 44;
+    }
+    
+    return  mCurrentSelected==indexPath.row?110:50;
+=======
+      if (type==1) {
+        return 44;
+    }
+      if (mCurrentSelected>0) {
+    Project*project=[mProjects objectAtIndex:mCurrentSelected];
+    for (NKSample*sample in project.samples) {
+      
+    }
+  }
+    return  mCurrentSelected==indexPath.row?110:50;
+>>>>>>> .r103
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{ 
+    static NSString *identify = @"ProjectCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+    
+    
+    if(!cell)
+    {
+        
+        if (type==1) {
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"projectCell" owner:nil options:nil] objectAtIndex:2];
+        }
+        
+        else{
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"projectCell" owner:nil options:nil] objectAtIndex:(indexPath.row==mCurrentSelected?1:0)];}
+    }
+    
+    if (type==1) {
+        
+        Project*project=[mProjects objectAtIndex:indexPath.row];
+        UILabel*label1=(UILabel*)[cell viewWithTag:2];
+        label1.text=project.ProjectName;
+        
+        UIButton*btn=(UIButton*)[cell viewWithTag:1];
+        
+        [btn setBackgroundImage:[UIImage imageNamed:@"单选.png"] forState:UIControlStateNormal];
+        
+        
+    }
+    else{
+        Project*project=[mProjects objectAtIndex:indexPath.row];
+        UILabel*label1=(UILabel*)[cell viewWithTag:1];
+        label1.text=project.ProjectName;
+        UILabel*label2=(UILabel*)[cell viewWithTag:2];
+        label2.text=project.ProjectId;
+        UIButton*btn=(UIButton*)[cell viewWithTag:4];
+        [btn addTarget:self action:@selector(downloadFileBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+    if (type==1||type==10) {
+        for (int i=0; i<[mProjects count];i++ ) {
+            
+            NSIndexPath *index=[NSIndexPath indexPathForRow:i inSection:0];
+            
+            if (indexPath.row==i) {
+                
+                UIButton      *btn = (UIButton *)[[selectTableView cellForRowAtIndexPath:indexPath] viewWithTag:1];
+                [btn setBackgroundImage:[UIImage imageNamed:@"单选1.png"] forState:UIControlStateNormal];
+            }
+            else{
+                
+                UIButton      *btn = (UIButton *)[[selectTableView cellForRowAtIndexPath:index ] viewWithTag:1];
+                [btn setBackgroundImage:[UIImage imageNamed:@"单选.png"] forState:UIControlStateNormal];
+                
+                
+            }
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        // [self cancle:[selectTableView cellForRowAtIndexPath:indexPath]];
+        
+        mCurrentSelected=indexPath.row;
+        type=10;
+        
+    }
+    else{
+        mCurrentSelected=indexPath.row;
+        [tableView reloadData];
+    }
+    
+}
+- (void)getDownLoadResumeFileWrapperDidReceive:(BILayerClient*)sender obj:(NSObject*)obj
+{
+    //DownLoadResumeFileWrapper*result=[[DownLoadResumeFileWrapper alloc]initWithJsonDictionary:obj];
+    
+    DownLoadResumeFileWrapper*downloader=[[DownLoadResumeFileWrapper alloc]initWithJsonDictionary:obj];
+    Project*project= sender.context;
+    
+    project.downloadFilelist=[downloader.ResumenFileList retain];
+    for (CAPIResumeFile*file in project.downloadFilelist) {
+        if (file.CompleteStatus==Init) {
+            //下载文件
+            [self downloadFile:file forProject:project];
+        }
+        
+    }
+    
+    
+}
+-(void)downloadFileBtnClicked:(id)sender
+{
+    
+    Project*project=[mProjects objectAtIndex:mCurrentSelected];
+    //获取项目包括的文件信息
+    if (project.downloadFilelist.count==0) {
+        BILayerClient*advClient = [[BILayerClient alloc] initWithTarget:self 
+                                                                 action:@selector(getDownLoadResumeFileWrapperDidReceive:obj:)];
+        User*currentuser= [[AppDelegate getAppDelegate]getCurrentUser];
+        advClient.context=project;
+        [advClient getDownLoadResumeFileWrapper:currentuser.username companyCode:currentuser.companyCode projectId:project.ProjectId deviceCode:@"123456789"];
+    }
+    else {
+        for (CAPIResumeFile*file in project.downloadFilelist) {
+            if (file.CompleteStatus==Init) {
+                //下载文件
+                [self downloadFile:file forProject:project];
+            }
+        }
+    }
+    
+    
+}
+- (void)downloadDidReceive:(BILayerClient*)sender obj:(NSObject*)obj
+{
+<<<<<<< .mine
+    Project*project=[((NSArray*)sender.context)objectAtIndex:0];
+    CAPIResumeFile*file=[((NSArray*)sender.context)objectAtIndex:1];
+    BILayerClient*advClient = [[BILayerClient alloc] initWithTarget:self 
+                                                             action:nil];
+    NSString*ppp=[[NSString alloc]initWithData:obj encoding:NSUTF8StringEncoding];
+    NSString*filepath=[PathHelper  getdocumentFilePath:file.Id];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:filepath])
+    {
+        [[NSFileManager defaultManager] createFileAtPath:filepath contents:nil attributes:nil];
+        
+    }
+    [ppp writeToFile:filepath atomically:NO];
+    [ppp release];
+    //该文件是项目信息文件，则解析项目信息
+    if (!file.isSurvery) {
+        [self parseProjectFileInfo:obj];
+    }
+    file.CompleteStatus=Complete;
+    [advClient sendCompleteUpLoadTaskInfo:@"2002" companyCode:@"SHNK"  deviceCode:@"123456789" projectId:project.ProjectId deviceType:@"2" taskid:file.TaskId];
+    
+=======
+    Project*project=[((NSArray*)sender.context)objectAtIndex:0];
+    CAPIResumeFile*file=[((NSArray*)sender.context)objectAtIndex:1];
+    BILayerClient*advClient = [[BILayerClient alloc] initWithTarget:self 
+                                                             action:nil];
+    NSString*ppp=[[NSString alloc]initWithData:obj encoding:NSUTF8StringEncoding];
+    NSString*filepath=[PathHelper  getdocumentFilePath:file.Id];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:filepath])
+    {
+        [[NSFileManager defaultManager] createFileAtPath:filepath contents:nil attributes:nil];
+        
+    }
+    [ppp writeToFile:filepath atomically:NO];
+    [ppp release];
+    //该文件是项目信息文件，则解析项目信息
+    if (!file.isSurvery) {
+          [self parseProjectFileInfo:obj project:project ];
+    }
+    file.CompleteStatus=Complete;
+    [advClient sendCompleteUpLoadTaskInfo:@"2002" companyCode:@"SHNK"  deviceCode:@"123456789" projectId:project.ProjectId deviceType:@"2" taskid:file.TaskId];
+    
+>>>>>>> .r103
+}
+-(void)downloadFile:(CAPIResumeFile*)file  forProject:(Project*)project
+{
+<<<<<<< .mine
+    //如果本地未保存文件，则从头开始下载文件
+    if (![PathHelper isFileExist:file.Id]) 
+    {
+        BILayerClient*advClient = [[BILayerClient alloc] initWithTarget:self 
+                                                                 action:@selector(downloadDidReceive:obj:)];
+        advClient.context=[[NSArray alloc]initWithObjects:project,file, nil];
+        [advClient downLoadFile:0 endPos:file.FileSize guid:file.Id];
+        
+    }
+}
+-(void)parseProjectFileInfo:(NSData*)filecontent
+{
+    NSError*error=Nil;
+    NSDictionary*dic=[[CJSONDeserializer deserializer]deserialize:filecontent error:&error ];
+    NSArray*keys=dic.allKeys;
+    for (NSString*key in keys ) {
+        NSLog(@"%@\n",key);
+    }
+    NSDictionary*agent=[dic valueForKey:@"AgentVO"];
+    [[AppDelegate getAppDelegate]getCurrentUser].agent=[[NKAgent alloc]initWithJsonDictionary:agent];
+    [[AppDelegate getAppDelegate]getCurrentUser].company=[[NKCompany alloc]initWithJsonDictionary:[dic valueForKey:@"CompanyVO"]];
+    
+=======
+    //如果本地未保存文件，则从头开始下载文件
+    if (![PathHelper isFileExist:file.Id]) 
+    {
+        BILayerClient*advClient = [[BILayerClient alloc] initWithTarget:self 
+                                                                 action:@selector(downloadDidReceive:obj:)];
+        advClient.context=[[NSArray alloc]initWithObjects:project,file, nil];
+        [advClient downLoadFile:0 endPos:file.FileSize guid:file.Id];
+        
+    }
+}
+-(void)parseProjectFileInfo:(NSData*)filecontent  project:(Project*)project
+{
+    NSError*error=Nil;
+    NSDictionary*dic=[[CJSONDeserializer deserializer]deserialize:filecontent error:&error ];
+    NSArray*keys=dic.allKeys;
+    for (NSString*key in keys ) {
+        NSLog(@"%@\n",key);
+    }
+    NSDictionary*agent=[dic valueForKey:@"AgentVO"];
+    [[AppDelegate getAppDelegate]getCurrentUser].agent=[[NKAgent alloc]initWithJsonDictionary:agent];
+    [[AppDelegate getAppDelegate]getCurrentUser].company=[[NKCompany alloc]initWithJsonDictionary:[dic valueForKey:@"CompanyVO"]];
+
+ 
+    NSArray*sampleStatusList=[dic valueForKey:@"SampleStatusList"];
+  if (project.sampleStatuss==nil) {
+    project.sampleStatuss=[[NSMutableArray alloc]init];
+  }
+  [project.sampleStatuss removeAllObjects];
+  for (NSDictionary*dic in sampleStatusList) {
+    [project.sampleStatuss addObject:[[NKSampleStatus alloc]initWithJsonDictionary:dic]];
+  }
+  
+  NSArray*sampleList=[dic valueForKey:@"SampleVOWrapperList"];
+  if (project.samples==nil) {
+    project.samples=[[NSMutableArray alloc]init];
+  }
+  [project.samples removeAllObjects];
+  for (NSDictionary*dic in sampleList) {
+    [project.samples addObject:[[NKSample alloc]initWithJsonDictionary:dic]];
+  }
+
+    
+>>>>>>> .r103
+}
+-(IBAction)excuteSurvey:(id)sender
+{
+<<<<<<< .mine
+    if (mCurrentSelected<0) {
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"提示消息" message:@"请先选择项目" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil] autorelease];
+        // optional - add more buttons:
+        [alert show];
+        
+        return;
+    }
+    Project*project=[mProjects objectAtIndex:mCurrentSelected];
+    NSString*surveyxml=@"";
+    for ( CAPIResumeFile*file in   project.downloadFilelist) {
+        if (file.isSurvery) {
+            surveyxml=[PathHelper  getdocumentFilePath:file.Id];
+            
+        }
+        if (file.CompleteStatus!=Complete) {
+            UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"提示消息" message:@"请先下载项目文件" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil] autorelease];
+            // optional - add more buttons:
+            [alert show];
+            
+            return;
+        }
+    }
+=======
+    if (mCurrentSelected<0) {
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"提示消息" message:@"请先选择项目" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil] autorelease];
+        // optional - add more buttons:
+        [alert show];
+        
+        return;
+    }
+    Project*project=[mProjects objectAtIndex:mCurrentSelected];
+    NSString*surveyxml=@"";
+    for ( CAPIResumeFile*file in   project.downloadFilelist) {
+        if (file.isSurvery) {
+            surveyxml=[PathHelper  getdocumentFilePath:file.Id];
+            
+        }
+        if (file.CompleteStatus!=Complete) {
+            UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"提示消息" message:@"请先下载项目文件" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil] autorelease];
+            // optional - add more buttons:
+            [alert show];
+            
+            return;
+        }
+    }
+    
+    [mSurveyManager loadSurveyFromLocal:surveyxml];
+    mTableView.hidden=YES;
+    mSurveyView.hidden=NO;
+    [mSurveyManager startSurvey:mSurveyQuestionView surveyExcuteDelegate:self];
+}
+//将指定项目的样本根据样本状态分组
+-(void)groupSampleListwithStatus
+{
+  if(mCurrentSelected<0)
+  {
+    return;
+  }
+  [mSampleListWithStatus removeAllObjects];
+  Project*project=[mProjects objectAtIndex:mCurrentSelected];
+  for (NKSample *sample in project.samples) {
+   // NSMutableArray*array=mSampleListWithStatus objectForKey:sample.status
+>>>>>>> .r103
+<<<<<<< .mine
+    
+    [mSurveyManager loadSurveyFromLocal:surveyxml];
+    mTableView.hidden=YES;
+    mSurveyView.hidden=NO;
+    [mSurveyManager startSurvey:mSurveyQuestionView surveyExcuteDelegate:self];
+=======
+  }
+>>>>>>> .r103
+}
+-(IBAction)projectManageClicked:(id)sender
+{
+    
+    if (btnstate==1) {
+        btn=sender;
+        btnstate=-1;
+    }
+    
+    
+    if (mCurrentSelected<0) {
+        selectView.hidden=NO;
+        type=1;
+        [selectTableView reloadData];
+    }
+    else{
+        
+        
+        
+        NSLog(@"%d",btn.selected);
+        if (btn.selected) {
+            otherMenuView.hidden=YES;
+            defaultMenuView.hidden=NO;
+            projectManageMenuView.hidden=YES;
+            btn.selected=NO;
+            
+        }
+        else{
+            
+            otherMenuView.hidden=YES;
+            defaultMenuView.hidden=YES;
+            projectManageMenuView.hidden=NO;
+            btn.selected=YES;
+            
+        }
+        
+        NSLog(@"%d",btn.selected);
+        
+    }
+    
+    
+    
+    
+    
+    
+}
+<<<<<<< .mine
+
+
+-(IBAction)cancle:(id)sender{
+    
+    selectView.hidden=YES;
+    
+    
+    if (type==10) {//当selectview被操作选择后
+        otherMenuView.hidden=YES;
+        defaultMenuView.hidden=YES;
+        projectManageMenuView.hidden=NO;
+        btn.selected=YES;
+        [mTableView reloadData];
+    }
+    
+    
+    
+    
+    type=-1;//用于下次继续进行selectview显示操作
+}
+
+
+=======
+
+
+-(IBAction)cancle:(id)sender{
+    
+    selectView.hidden=YES;
+    
+    
+    if (type==10) {//当selectview被操作选择后
+//        otherMenuView.hidden=YES;
+//        defaultMenuView.hidden=YES;
+//        projectManageMenuView.hidden=NO;
+//        btn.selected=YES;
+        [mTableView reloadData];
+    }
+    
+    
+    
+    
+    type=-1;//用于下次继续进行selectview显示操作
+}
+
+
+>>>>>>> .r103
+-(IBAction)sampleManageClicked:(id)sender
+{
+<<<<<<< .mine
+    mSurveyView.hidden=NO;
+    mTableView.hidden=YES;
+    SampleViewController*viewcontroller=[[SampleViewController alloc]init];
+    mSurveyQuestionView=viewcontroller;
+    [viewcontroller showView];
+    
+=======
+      mSurveyView.hidden=NO;
+    mTableView.hidden=NO;
+  if (mCurrentSelected<0) {
+    selectView.hidden=NO;
+    type=1;
+    [selectTableView reloadData];
+  }else {
+    if (currentSample==nil) {
+      
+    }
+  }
+    
+>>>>>>> .r103
+}
+-(IBAction)statisticsClicked:(id)sender
+{
+    
+}
+-(IBAction)otherClicked:(id)sender
+{   
+    
+    if (btnstateOther==1) {
+        otherBtn=sender;
+        btnstateOther=-1;
+    }
+    
+    if (otherBtn.selected) {
+        otherMenuView.hidden=YES;
+        defaultMenuView.hidden=NO;
+        projectManageMenuView.hidden=YES;
+        otherBtn.selected=NO;
+    }
+    else{
+        otherMenuView.hidden=NO;
+        defaultMenuView.hidden=YES;
+        projectManageMenuView.hidden=YES;
+        otherBtn.selected=YES;
+    }
+}
+
+#pragma mark-
+#pragma  mark NKSurveyExcuteDelegate 
+-(void)surveyExcuteStatus:(BOOL)finished currentQIndex:(int) currentQIndex
+{
+    if(finished)
+    {
+        mTableView.hidden=NO;
+        mSurveyView.hidden=YES;
+        NSMutableArray*answers=[mSurveyManager getQuestionAnswer];
+        SuveyAnswer *surveyAnswer=[[SuveyAnswer alloc]initWithAgent:[[AppDelegate getAppDelegate]getCurrentUser].agent company:[[AppDelegate getAppDelegate]getCurrentUser].company project:[mProjects objectAtIndex:mCurrentSelected]];
+        NSError*error=nil;
+        NSData*data=[[CJSONSerializer serializer]serializeObject:[surveyAnswer generateDictionary] error:&error];
+        
+        
+    }
+    NSLog(@"%d",currentQIndex);
+}
+@end
